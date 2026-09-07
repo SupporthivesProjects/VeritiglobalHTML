@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap');
+
+
+/* --------- External Library  CSS -------- */
+@import url(../css/hamburgers.css);
+@import url(/uiframe/css/bootstrap.min.css);
+@import url(/uiframe/css/animate.min.css);
+@import url(/uiframe/css/font-awesome.min.css);
+@import url(/uiframe/css/aos.css);
+
+/* --------- External Slider  CSS -------- */
+
+@import url(../css/owl.carousel.min.css);
+@import url(../css/owl.theme.default.css);
+@import url(../css/swiper-bundle.min.css);
+@import url(/uiframe/css/slick.css);
+@import url(/uiframe/css/slick-theme.css);
+
+/* --------- developer slider css -------- */
+
+@import url(../css/dhiraj.css);
+@import url(../css/dhirajresponsive.css);
+@import url(../css/tstyle.css);
+@import url(../css/sakch.css);
+@import url(../css/sakdam.css);
+@import url(../css/rstyle.css);
+@import url(../css/diksha.css);
+@import url(../css/medhnash.css);
+@import url(../css/style.css);
+@import url(../css/responsive.css);
+
+/* ------------font family ---------- */
+
+@font-face {
+  font-family: 'Satoshi';
+  src: url('../fonts/Satoshi-Regular.otf') format('opentype');
+}
+@font-face {
+  font-family: 'Satoshi Black';
+  src: url('../fonts/Satoshi-Black.otf') format('opentype');
+}
+@font-face {
+  font-family: 'Satoshi Bold';
+  src: url('../fonts/Satoshi-Bold.otf') format('opentype');
+}
+@font-face {
+  font-family: 'Satoshi Light';
+  src: url('../fonts/Satoshi-Light.otf') format('opentype');
+}
+@font-face {
+  font-family: 'Satoshi Medium';
+  src: url('../fonts/Satoshi-Medium.otf') format('opentype');
+}
+
+
+
+
+@media (min-width: 576px){
+  .container, .container-sm {
+      max-width: 540px;
+  }
+}
+@media (min-width: 768px){
+  .container, .container-md, .container-sm {
+      max-width: 750px;
+  }
+}
+@media (min-width: 992px){
+  .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+      max-width: 970px;
+  }
+}
+@media (min-width: 1080px){
+  .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+      max-width: 1030px;
+  }
+}
+@media (min-width: 1100px){
+  .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+      max-width: 1100px;
+  }
+}
+@media (min-width: 1200px){
+  .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+      max-width: 1200px;
+  }
+}
+@media (min-width: 1400px){
+  .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+       max-width: 1420px;
+  }
+}
+@media (min-width: 1500px){
+  .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+      max-width: 1440px;
+  }
+}
+@media only screen and (min-width: 1600px) and (max-width: 1700px){
+  .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+      max-width: 1440px;
+  }
+}
+@media only screen and (min-width: 1701px) and (max-width: 1800px){
+  .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+    max-width: 1440px;
+  }
+}
+@media only screen and (min-width: 1801px) and (max-width: 1920px){
+  .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+     max-width: 1440px;
+  }
+}
+@media only screen and (min-width: 1921px) and (max-width: 2880px){
+  .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+    max-width: 1440px;
+  } 
+}
+.bg-image {
+  object-fit: cover;
+}
+.bg-image {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+.bg-image:not([class*=absolute]) {
+  position: absolute;
+}
+section {
+  padding: 80px  0;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+html {
+  scroll-behavior: smooth;
+}
+html,body{
+  overflow-x:hidden;
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
