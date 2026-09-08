@@ -10,6 +10,9 @@
     <title>Veritiglobal</title>
     <link rel="icon" type="image/png" sizes="16x16" href="./img/tg-icon.svg">
     <link rel="stylesheet" href="css/mainBase.css">
+    <!-- Motion -->
+    <link rel="stylesheet" href="css/motion.css">
+    <link rel="stylesheet" href="css/tokens.css">
   </head>
   <body>
   

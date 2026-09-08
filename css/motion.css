@@ -1,0 +1,44 @@
+/* =============================================================
+   VERITI GLOBAL  ·  motion.css
+   Scroll reveal and text write-in engine. Pairs with js/motion.js.
+   Drop both onto any page and drive it entirely from data attributes.
+   See README.md > Adding motion to a new page.
+   ============================================================= */
+
+/* ---------- reveal + write engine ---------- */
+[data-reveal="fade"]{opacity:0;transform:translateY(22px);transition:opacity .75s ease var(--sd,0ms), transform .85s cubic-bezier(.2,.8,.2,1) var(--sd,0ms)}
+[data-reveal="fade"].is-in{opacity:1;transform:none}
+
+.w{display:inline-block;white-space:nowrap}
+.c{display:inline-block;will-change:opacity,transform}
+[data-write] .c,[data-write] .w[data-u]{
+  opacity:0;
+  transform:translateY(.34em);
+  color:var(--red);
+  transition:
+    opacity .42s ease var(--d,0ms),
+    transform .62s cubic-bezier(.2,.8,.2,1) var(--d,0ms),
+    color .7s ease calc(var(--d,0ms) + 240ms);
+}
+.is-in [data-write] .c,.is-in [data-write] .w[data-u],
+[data-write].is-in .c,[data-write].is-in .w[data-u]{
+  opacity:1;transform:none;color:inherit;
+}
+[data-write="word"] .w[data-u]{transform:translateY(8px);color:inherit;transition:opacity .5s ease var(--d,0ms), transform .6s cubic-bezier(.2,.8,.2,1) var(--d,0ms)}
+
+.rule{background:var(--rule);height:1px;width:100%;transform:scaleX(0);transform-origin:left center;transition:transform .95s cubic-bezier(.2,.8,.2,1) var(--sd,0ms)}
+.rule--heavy{height:2px;background:var(--ink)}
+.rule--v{width:1px;height:auto;align-self:stretch;transform:scaleY(0);transform-origin:top center;transition:transform .8s cubic-bezier(.2,.8,.2,1)}
+.is-in .rule,.rule.is-in{transform:none}
+
+.lazyimg{opacity:0;transition:opacity .9s ease}
+.lazyimg.is-loaded{opacity:1}
+
+/* Reduced motion: everything resolves to its final state instantly. */
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{animation-duration:.001ms !important;animation-iteration-count:1 !important;transition-duration:.001ms !important;scroll-behavior:auto !important}
+  [data-reveal="fade"]{opacity:1;transform:none}
+  [data-write] .c,[data-write] .w[data-u]{opacity:1;transform:none;color:inherit}
+  .rule{transform:none}
+  .hero-rule{transform:none}
+}

@@ -1,0 +1,203 @@
+.desktop_none{
+    display: none !important;
+}
+.mobile_none{
+    display: block !important;
+}
+/* FAQ Start */
+.faq_s1{
+    padding: 240px 0px 104px 0px;
+    background: var(--brand-paper, #F3E8D5);
+}
+.faq_c1{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+.faq_s1top{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 16px 0px;
+}
+.faq_s1topleft{
+    color: var(--brand-seal, #AF2419);
+    font-family: "Work Sans";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 140%;
+    letter-spacing: 1.92px;
+    text-transform: uppercase;
+    margin: 0px;
+}
+.faq_s1topright{
+    color: var(--brand-ink-soft, #3E3830);
+    font-family: "Work Sans";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 140%;
+    letter-spacing: 1.92px;
+    text-transform: uppercase;
+    margin: 0px;
+}
+.faq_s1bottom{
+    display: flex;
+    padding-top: 40px;
+    gap: 120px;
+    justify-content: space-between;
+}
+.faq_s1bottomleft{
+    color: var(--brand-ink, #211E1B);
+    font-family: "DM Serif Display";
+    font-size: 56px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%;
+    letter-spacing: -0.56px;
+    margin: 0px;
+}
+.faq_s1bottomright{
+    color: var(--brand-ink-soft, #3E3830);
+    font-family: "Work Sans";
+    font-size: 21px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 155%;
+    margin: 0px;
+    max-width: 460px;
+}
+.faq_s2{
+    padding: 104px 0px;
+}
+.faq_s3{
+    padding: 104px 0px;
+    background: var(--brand-ink, #211E1B);
+}
+.faq_c3{
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    justify-content: center;
+    align-items: center;
+}
+.faq_s3title{
+    color: var(--brand-paper, #F3E8D5);
+    text-align: center;
+    font-family: "DM Serif Display";
+    font-size: 56px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%;
+    letter-spacing: -0.56px;
+    margin: 0px;
+}
+.faq_s3subtitle{
+    color: var(--brand-paper, #F3E8D5);
+    text-align: center;
+    font-family: "Work Sans";
+    font-size: 21px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 155%;
+    margin: 0px;
+    max-width: 720px;
+}
+.faq_s3btnbar{
+    display: flex;
+    padding-top: 16px;
+    gap: 20px;
+}
+.faq_s3btnred{
+    display: flex;
+    padding: 16px 32px;
+    align-items: center;
+    gap: 14px;
+    border-radius: var(--radius-xs, 4px);
+    background: var(--brand-seal, #AF2419);
+    color: var(--Base-White, #FFF);
+    font-family: "Work Sans";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 140%;
+}
+.faq_s3btnblack{
+    display: flex;
+    padding: 16px 32px;
+    align-items: center;
+    gap: 14px;
+    border-radius: var(--radius-xs, 4px);
+    border: 1px solid var(--brand-paper, #F3E8D5);
+    color: var(--brand-paper, #F3E8D5);
+    font-family: "Work Sans";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 140%;
+}
+/* FAQ End */
+
+
+
+
+/* *************** */
+/* Responsive Css */
+/* ************* */
+@media screen and (max-width: 700px) {
+    .desktop_none{
+        display: block !important;
+    }
+    .mobile_none{
+        display: none !important;
+    }
+    /* FAQ Start */
+    .faq_s1{
+        padding: 112px 0px 56px 0px;
+    }
+    .faq_c1{
+        padding: 0px 24px;
+        gap: 24px;
+    }
+    .faq_s1bottom{
+        flex-direction: column;
+        gap: 24px;
+        padding: 0px;
+    }
+    .faq_s1bottomleft{
+        font-size: 36px;
+    }
+    .faq_s1bottomright{
+        font-size: 19px;
+    }
+    /* FAQ End */
+}
+
+@media screen and (min-device-width: 700px) and (max-device-width: 799px) {}
+
+@media screen and (min-device-width: 800px) and (max-device-width: 899px) {}
+
+@media screen and (min-device-width: 900px) and (max-device-width: 999px) {}
+
+@media screen and (min-device-width: 1000px) and (max-device-width: 1099px) {}
+
+@media screen and (min-device-width: 1100px) and (max-device-width: 1199px) {}
+
+@media screen and (min-device-width: 1200px) and (max-device-width: 1299px) {}
+
+@media screen and (min-device-width: 1300px) and (max-device-width: 1399px) {}
+
+@media screen and (min-device-width: 1400px) and (max-device-width: 1499px) {}
+
+@media screen and (min-device-width: 1500px) and (max-device-width: 1599px) {}
+
+@media screen and (min-device-width: 1600px) and (max-device-width: 1699px) {}
+
+@media screen and (min-device-width: 1700px) and (max-device-width: 1799px) {}
+
+@media screen and (min-device-width: 1800px) and (max-device-width: 1899px) {}
+
+@media screen and (min-device-width: 1900px) and (max-device-width: 1999px) {}
+
+@media screen and (min-device-width: 2000px) and (max-device-width: 2400px) {}
