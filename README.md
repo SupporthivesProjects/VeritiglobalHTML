@@ -28,6 +28,7 @@ Email Template : Saakshi Chaturvedi<br>
 
 # Figma
 figma copy-version :- https://www.figma.com/design/K0Syi6tsWs5u3RkQT2507A/AD551---Reskin-Translation---Veritiglobal.com--Copy-?node-id=3357-851&p=f&t=9V4zbsSXewXLdGAq-0 <br>
+
 live figma:- https://www.figma.com/design/8ZJscy1EtQU0aD1GpXizEK/AD551---Reskin-Translation---Veritiglobal.com?node-id=13439-6574&t=3rPu9b7P4BfjuIIy-0 <br>
 
 prototype figma:- https://www.figma.com/proto/8ZJscy1EtQU0aD1GpXizEK/AD551---Reskin-Translation---Veritiglobal.com?node-id=13439-6388&t=3rPu9b7P4BfjuIIy-0&scaling=min-zoom&content-scaling=fixed&page-id=3357%3A851
