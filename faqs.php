@@ -6,8 +6,8 @@
         <div class="chapter" data-reveal="write">
             <div class="rule rule--heavy"></div>
             <div class="faq_s1top">
-                <p class="faq_s1topleft">CHAPTER 06</p>
-                <p class="faq_s1topright">SECTION LABEL</p>
+                <p class="faq_s1topleft">CHAPTER 01</p>
+                <p class="faq_s1topright">FAQS</p>
             </div>
             <div class="rule" style="--sd:120ms"></div>
         </div>
