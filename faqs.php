@@ -185,7 +185,7 @@
 <!-- Section 3 End -->
 
 <?php include 'includes/footer.php'; ?>
-
+<!-- Accordion JS -->
 <script>
     document.addEventListener("DOMContentLoaded", function () {
         const accordionItems = document.querySelectorAll(".faq_accordion .accordion-item");
