@@ -849,6 +849,9 @@ border-radius: var(--radius-s, 8px);
     .only_for_me .stats .divider {
         min-height: auto;
     }
+    .only_for_me .section-stack {
+        padding: 0px;
+    }
 }
 
 @media only screen and (min-width: 780px) and (max-width:991px) {
