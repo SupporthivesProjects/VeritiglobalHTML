@@ -168,14 +168,3 @@
         });
     });
 </script>
-
-
-
-
-
-<script>
-document.getElementById("openSuccessModal").addEventListener("click", function () {
-    const successModal = new bootstrap.Modal(document.getElementById("successModal"));
-    successModal.show();
-});
-</script>
