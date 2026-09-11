@@ -1,0 +1,935 @@
+.translation-configurator {
+    --brand-seal: #AF2419;
+    --brand-seal-light: #D4574A;
+    --brand-ink: #211E1B;
+    --brand-ink-soft: #3E3830;
+    --brand-paper: #F3E8D5;
+    --brand-paper-tint: #F4EEE3;
+    --brand-paper-deep: #D6C6B4;
+    --base-white: #FFFFFF;
+    --radius-xs: 4px;
+
+    width: 100%;
+    background: #fff;
+}
+
+/* =========================================
+   REQUEST TRANSLATION
+   ========================================= */
+
+.translation-section {
+    width: 100%;
+    background: var(--brand-paper, #F3E8D5);
+    padding: 179px 0 72px;
+}
+
+.translation-section > .container {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 24px;
+}
+
+
+.translation-header {
+    display: flex;
+    width: 100%;
+    padding: 16px 0;
+    justify-content: space-between;
+    align-items: center;
+    align-self: stretch;
+    border-top: 1px solid var(--brand-ink, #211E1B);
+    border-bottom: 1px solid var(--brand-paper-deep, #D6C6B4);
+    margin-top: 40px;
+    margin-bottom: 0px;
+}
+
+.translation-chapter {
+    color: var(--brand-seal, #AF2419);
+    font-family: "Work Sans", sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 140%;
+    letter-spacing: 1.92px;
+    text-transform: uppercase;
+        margin-bottom: 0px;
+
+}
+
+.translation-label {
+    color: var(--brand-ink-soft, #3E3830);
+    font-family: "Work Sans", sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 140%;
+    letter-spacing: 1.92px;
+    text-transform: uppercase;
+            margin-bottom: 0px;
+
+}
+
+
+/* =========================================
+   HERO
+   ========================================= */
+
+.translation-hero {
+    display: flex;
+    width: 100%;
+    align-items: flex-start;
+    gap: 24px;
+    justify-content: space-between;
+    align-self: stretch;
+padding-top: 32px;
+ }
+
+
+.translation-title {
+    margin: 0;
+
+    color: var(--brand-ink, #211E1B);
+
+    font-family: "DM Serif Display", serif;
+    font-size: 56px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%;
+    letter-spacing: -0.56px;
+}
+
+
+.translation-description p {
+    margin: 0;
+    color: var(--brand-ink-soft, #3E3830);
+    font-family: "Work Sans", sans-serif;
+    font-size: 21px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 155%;
+    max-width: 460px;
+}
+
+
+/* =========================================================
+   MAIN LAYOUT
+   ========================================================= */
+.translation-configurator{
+    display: flex;
+padding: 104px 0px;
+flex-direction: column;
+align-items: flex-start;
+align-self: stretch;
+}
+
+
+.translation-configurator .configurator-layout {
+    display: flex;
+    width: 100%;
+    align-items: flex-start;
+    gap: 96px;
+}
+
+.translation-configurator .configurator-form {
+    display: flex;
+    flex: 1 0 0;
+    min-width: 0;
+
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 40px;
+}
+
+
+/* =========================================================
+   COMMON SECTION
+   ========================================================= */
+
+.translation-configurator .config-section {
+    display: flex;
+    width: 100%;
+
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+}
+
+
+/* =========================================================
+   SECTION HEADING
+   ========================================================= */
+
+.translation-configurator .config-section__heading {
+    display: flex;
+    width: 100%;
+    align-items: baseline;
+    gap: 16px;
+    padding-bottom: 8px;
+
+}
+
+.translation-configurator .section-number {
+    color: var(--brand-seal);
+
+    font-family: "DM Serif Display", serif;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 125%;
+    letter-spacing: -0.4px;
+}
+
+.translation-configurator .config-section__heading h2 {
+    margin: 0;
+
+    color: var(--brand-ink);
+
+    font-family: "DM Serif Display", serif;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 125%;
+    letter-spacing: -0.4px;
+}
+
+
+/* =========================================================
+   SERVICE CARDS
+   ========================================================= */
+
+.translation-configurator .service-options {
+    display: flex;
+    width: 100%;
+    gap: 24px;
+}
+
+.translation-configurator .service-card {
+    position: relative;
+
+    display: flex;
+    flex: 1 0 0;
+    min-width: 0;
+
+    padding: 32px;
+
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+
+    border-radius: var(--radius-xs);
+    border: 1px solid var(--brand-paper-deep);
+    background: var(--base-white);
+
+    cursor: pointer;
+}
+
+.translation-configurator .service-card--active {
+    border: 1.5px solid var(--brand-seal);
+    background: var(--brand-paper-tint);
+}
+
+.translation-configurator .service-card input,
+.translation-configurator .delivery-card input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+}
+
+.translation-configurator .service-card__content {
+    display: flex;
+    width: 100%;
+
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.translation-configurator .service-card__top {
+    display: flex;
+    width: 100%;
+
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.translation-configurator .service-card__title,
+.translation-configurator .delivery-card__title {
+    color: var(--brand-ink);
+
+    font-family: "DM Serif Display", serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%;
+}
+
+.translation-configurator .service-card__price,
+.translation-configurator .delivery-card__time {
+    color: var(--brand-seal);
+
+    font-family: "Work Sans", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 140%;
+    letter-spacing: 1.6px;
+    text-transform: uppercase;
+}
+
+.translation-configurator .service-card__description,
+.translation-configurator .delivery-card__description {
+    color: var(--brand-ink-soft);
+
+    font-family: "Work Sans", sans-serif;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+}
+
+.translation-configurator .service-card,
+.translation-configurator .delivery-card {
+    position: relative;
+    cursor: pointer;
+}
+
+
+/* Hide the native radio but KEEP it clickable */
+.translation-configurator .service-card input[type="radio"],
+.translation-configurator .delivery-card input[type="radio"] {
+    position: absolute;
+
+    width: 1px;
+    height: 1px;
+
+    opacity: 0;
+
+    margin: 0;
+}
+
+
+/* DEFAULT / NON ACTIVE */
+
+.translation-configurator .service-card,
+.translation-configurator .delivery-card {
+    border: 1px solid var(--brand-paper-deep);
+    background: #fff;
+}
+
+
+/* SELECTED CARD */
+
+.translation-configurator .service-card:has(input[type="radio"]:checked),
+.translation-configurator .delivery-card:has(input[type="radio"]:checked) {
+    border: 1.5px solid var(--brand-seal);
+    background: var(--brand-paper-tint);
+}
+
+
+/* RADIO CIRCLE */
+
+.translation-configurator .radio-control {
+    display: flex;
+
+    width: 20px;
+    height: 20px;
+
+    flex: 0 0 20px;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+    border: 1px solid var(--brand-paper-deep);
+
+    background: #fff;
+}
+
+
+/* SELECTED RADIO CIRCLE */
+
+.translation-configurator
+.service-card:has(input[type="radio"]:checked)
+.radio-control,
+
+.translation-configurator
+.delivery-card:has(input[type="radio"]:checked)
+.radio-control {
+    border: 1.5px solid var(--brand-seal);
+}
+
+
+/* INNER DOT */
+
+.translation-configurator
+.service-card:has(input[type="radio"]:checked)
+.radio-control::after,
+
+.translation-configurator
+.delivery-card:has(input[type="radio"]:checked)
+.radio-control::after {
+    content: "";
+
+    width: 8px;
+    height: 8px;
+
+    border-radius: 50%;
+
+    background: var(--brand-seal);
+}
+
+
+/* HOVER */
+
+.translation-configurator .service-card:hover,
+.translation-configurator .delivery-card:hover {
+    border-color: var(--brand-seal);
+}
+/* =========================================================
+   DOCUMENT
+   ========================================================= */
+
+.translation-configurator .document-upload {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--brand-paper-deep);
+    padding-bottom: 14px;
+}
+
+.translation-configurator .document-info {
+    display: flex;
+
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+}
+
+.translation-configurator .field-label,
+.translation-configurator .language-field label,
+.translation-configurator .length-field label,
+.translation-configurator .comments-field label {
+    color: var(--brand-ink-soft);
+
+    font-family: "Work Sans", sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 140%;
+    letter-spacing: 1.92px;
+    text-transform: uppercase;
+}
+
+.translation-configurator .document-name {
+color: var(--brand-ink, #211E1B);
+font-family: "Work Sans";
+font-size: 17px;
+font-style: normal;
+font-weight: 400;
+line-height: 155%; /* 26.35px */
+}
+
+.translation-configurator .replace-file {
+    padding: 0;
+
+    border: 0;
+    background: transparent;
+color: var(--brand-seal, #AF2419);
+text-align: right;
+font-family: "Work Sans";
+font-size: 12px;
+font-style: normal;
+font-weight: 600;
+line-height: 140%; /* 16.8px */
+letter-spacing: 1.92px;
+text-transform: uppercase;
+}
+
+
+/* =========================================================
+   LANGUAGE PAIR
+   ========================================================= */
+
+.translation-configurator .language-options {
+    display: flex;
+    width: 100%;
+    gap: 24px;
+}
+
+.translation-configurator .language-field {
+    display: flex;
+    flex: 1 0 0;
+    min-width: 0;
+
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.translation-configurator .select-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.translation-configurator .select-wrapper select {
+    width: 100%;
+    height: 44px;
+
+    padding: 0 32px 0 0;
+
+    border: 0;
+    border-bottom: 1px solid var(--brand-paper-deep);
+    border-radius: 0;
+
+    appearance: none;
+    -webkit-appearance: none;
+
+    background: #fff;
+
+color: var(--brand-ink, #211E1B);
+font-family: "Work Sans";
+font-size: "17px";
+font-style: normal;
+font-weight: 400;
+line-height: 155%; /* 26.35px */
+    outline: none;
+}
+
+.translation-configurator .select-arrow {
+    position: absolute;
+
+    top: 50%;
+    right: 0;
+
+    display: flex;
+
+    width: 20px;
+    height: 20px;
+
+    align-items: center;
+    justify-content: center;
+
+    transform: translateY(-50%);
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   LENGTH
+   ========================================================= */
+
+.translation-configurator .length-field {
+    display: flex;
+    width: 100%;
+
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.translation-configurator .length-field input {
+    width: 100%;
+    height: 48px;
+
+    padding: 0;
+
+    border: 0;
+    border-bottom: 1px solid var(--brand-paper-deep);
+    border-radius: 0;
+
+    background: transparent;
+
+    color: var(--brand-ink-soft);
+
+    font-family: "Work Sans", sans-serif;
+    font-size: 17px;
+    font-weight: 400;
+
+    outline: none;
+}
+
+.translation-configurator .length-field p {
+    margin: 12px 0 0;
+
+    color: var(--brand-ink-soft);
+
+    font-family: "Work Sans", sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 150%;
+}
+
+
+/* =========================================================
+   COMMENTS
+   ========================================================= */
+
+.translation-configurator .comments-field {
+    display: flex;
+    width: 100%;
+    min-height: 160px;
+
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.translation-configurator .comments-field textarea {
+    width: 100%;
+    min-height: 132px;
+
+    padding: 16px 0;
+
+    border: 0;
+    border-radius: 0;
+
+    background: transparent;
+
+    color: var(--brand-ink-soft);
+border-bottom: 1px solid var(--brand-paper-deep, #D6C6B4);
+    font-family: "Work Sans", sans-serif;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 150%;
+
+    resize: vertical;
+    outline: none;
+}
+
+.translation-configurator .comments-field textarea::placeholder {
+    color: var(--brand-ink-soft);
+    opacity: 1;
+}
+
+/* =========================================================
+   DELIVERY
+   ========================================================= */
+
+.translation-configurator .delivery-options {
+    display: flex;
+    width: 100%;
+    gap: 24px;
+}
+
+.translation-configurator .delivery-card {
+    position: relative;
+
+    display: flex;
+    flex: 1 0 0;
+    min-width: 0;
+
+    padding: 32px;
+
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+
+    border-radius: var(--radius-xs);
+    border: 1px solid var(--brand-paper-deep);
+    background: #fff;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.2s ease,
+        border-color 0.2s ease;
+}
+
+
+/* ONLY CHECKED CARD */
+
+.translation-configurator .delivery-card:has(input[type="radio"]:checked) {
+    border: 1.5px solid var(--brand-seal);
+    background: var(--brand-paper-tint);
+}
+
+
+/* HOVER */
+
+.translation-configurator .delivery-card:hover {
+    border-color: var(--brand-seal);
+}
+
+
+/* RADIO INPUT */
+
+.translation-configurator .delivery-card input[type="radio"] {
+    position: absolute;
+
+    width: 1px;
+    height: 1px;
+
+    opacity: 0;
+}
+
+
+/* CARD CONTENT */
+
+.translation-configurator .delivery-card__content {
+    display: flex;
+    width: 100%;
+
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+
+/* TOP */
+
+.translation-configurator .delivery-card__top {
+    display: flex;
+    width: 100%;
+
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+
+/* TITLE */
+
+.translation-configurator .delivery-card__title {
+    color: var(--brand-ink);
+
+    font-family: "DM Serif Display", serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%;
+}
+
+
+/* TIME */
+
+.translation-configurator .delivery-card__time {
+    color: var(--brand-seal);
+
+    font-family: "Work Sans", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 140%;
+    letter-spacing: 1.6px;
+    text-transform: uppercase;
+}
+
+
+/* DESCRIPTION */
+
+.translation-configurator .delivery-card__description {
+    color: var(--brand-ink-soft);
+
+    font-family: "Work Sans", sans-serif;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+}
+
+
+/* RADIO CIRCLE */
+
+.translation-configurator .delivery-card .radio-control {
+    display: flex;
+
+    width: 18px;
+    height: 18px;
+
+    flex: 0 0 18px;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+    border: 1px solid var(--brand-paper-deep);
+
+    background: #fff;
+}
+
+
+/* SELECTED RADIO */
+
+.translation-configurator
+.delivery-card:has(input[type="radio"]:checked)
+.radio-control {
+    border: 1.5px solid var(--brand-seal);
+}
+
+
+/* SELECTED DOT */
+
+.translation-configurator
+.delivery-card:has(input[type="radio"]:checked)
+.radio-control::after {
+    content: "";
+
+    width: 8px;
+    height: 8px;
+
+    border-radius: 50%;
+
+    background: var(--brand-seal);
+}
+
+/* =========================================================
+   QUOTE CARD
+   ========================================================= */
+
+.translation-configurator .quote-card {
+    display: flex;
+
+    width: 100%;
+    flex: 0 0 520px;
+
+    flex-direction: column;
+
+    background: var(--brand-ink);
+}
+
+
+/* QUOTE HEADER */
+
+.translation-configurator .quote-card__header {
+    display: flex;
+
+padding: 40px 40px 32px 40px;
+
+    flex-direction: column;
+    align-items: flex-start;
+border-bottom: 1px solid var(--brand-paper-deep, #D6C6B4);
+}
+
+.translation-configurator .quote-label {
+    color: var(--brand-seal-light);
+
+    font-family: "Work Sans", sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 140%;
+    letter-spacing: 1.92px;
+    text-transform: uppercase;
+}
+
+.translation-configurator .quote-price {
+    margin: 8px 0px;
+
+    color: var(--brand-paper);
+
+    font-family: "DM Serif Text", serif;
+    font-size: 96px;
+    font-weight: 400;
+    line-height: 100%;
+}
+
+.translation-configurator .quote-summary {
+    color: var(--brand-paper);
+
+    font-family: "Work Sans", sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 150%;
+    opacity: 0.55;
+}
+
+
+/* QUOTE DETAILS */
+
+.translation-configurator .quote-card__details {
+    display: flex;
+
+    padding: 24px 40px 40px;
+
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.translation-configurator .quote-detail {
+    display: flex;
+    min-height: 46px;
+
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+
+    border-top: 1px solid var(--brand-paper-deep);
+
+    opacity: .9;
+}
+
+.translation-configurator .quote-detail span,
+.translation-configurator .quote-detail strong {
+    color: var(--brand-paper);
+
+    font-family: "Work Sans", sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 150%;
+    opacity: 0.55;
+}
+
+.translation-configurator .quote-detail strong {
+    text-align: right;
+}
+
+
+/* =========================================================
+   ADD TO CART
+   ========================================================= */
+
+.translation-configurator .add-to-cart {
+    display: flex;
+    width: 100%;
+
+    margin-top: 32px;
+    padding: 16px 32px;
+
+    align-items: center;
+    gap: 14px;
+
+    border: 0;
+    border-radius: var(--radius-xs);
+
+    background: var(--brand-seal);
+    color: #fff;
+
+    font-family: "Work Sans", sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 140%;
+
+    cursor: pointer;
+
+    transition: background .25s ease;
+}
+
+.translation-configurator .add-to-cart:hover {
+border-radius: var(--radius-xs, 4px);
+background: var(--brand-ink, #211E1B);
+color: var(--brand-paper, #F3E8D5);
+
+}
+
+
+/* =========================================================
+   QUOTE NOTE
+   ========================================================= */
+
+.translation-configurator .quote-note {
+    margin: 16px 0 0;
+
+    color: var(--brand-paper);
+
+    font-family: "Work Sans", sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 150%;
+
+    opacity: .55;
+}
+
+
+
