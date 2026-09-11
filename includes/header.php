@@ -19,7 +19,7 @@
   <div class="main-div">
     <header class="header-top fixed-top" id="header-top">
       <nav class="navbar navbar-expand-lg">
-        <div class="container p-mo">
+        <div class="container p-mo p-0">
          <div class="logo-mo-div">
             <a class="navbar-brand" href="#">
               <img src="./img/m-logo.svg" alt="" class="img-fluid d-lg-none d-md-blocks d-block  brand-logo-mo" id="logo">
@@ -69,7 +69,7 @@
                 <a class="nav-link" href="aboutus.php">Our process</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="contact_us.php">Our story</a>
+                <a class="nav-link" href="ourstory.php">Our story</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="contact_us.php">Faqs</a>

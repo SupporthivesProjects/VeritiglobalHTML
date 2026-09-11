@@ -17,7 +17,7 @@
 @import url(/uiframe/css/slick.css);
 @import url(/uiframe/css/slick-theme.css);
 
-/* --------- developer slider css -------- */
+/* --------- developer  css -------- */
 
 @import url(../css/dhiraj.css);
 @import url(../css/dhirajresponsive.css);
@@ -147,3 +147,38 @@ html,body{
   box-sizing: border-box;
 }
 
+
+.border-top-2{
+  border-top: 2px solid #211E1B;
+}
+.border-bottom-2{
+  border-bottom: 2px solid #211E1B;
+}
+.border-bottom-deep{
+  border-bottom: 2px solid #D6C6B4;
+}
+.border-top-deep{
+  border-top: 2px solid #D6C6B4;
+}
+.tag-seal{
+  color: var(--brand-seal, #AF2419);
+  font-family: "Work Sans";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 140%; /* 16.8px */
+  letter-spacing: 1.92px;
+  text-transform: uppercase;
+  margin-bottom: 0px;
+}
+.tag-soft{
+  color: var(--brand-ink-soft, #3E3830);
+  font-family: "Work Sans";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 140%; /* 16.8px */
+  letter-spacing: 1.92px;
+  text-transform: uppercase;
+  margin-bottom: 0px;
+}
