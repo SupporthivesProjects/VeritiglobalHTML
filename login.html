@@ -7,6 +7,8 @@
     <title>Veritiglobal</title>
     <link rel="icon" type="image/png" sizes="16x16" href="./img/tg-icon.svg">
     <link rel="stylesheet" href="css/mainBase.css">
+    <link rel="stylesheet" href="css/motion.css">
+    <link rel="stylesheet" href="css/tokens.css">
   </head>
   <body>
   
@@ -127,16 +129,20 @@
    <main class="login-page">
 
     <!-- LEFT SIDE -->
-    <section class="login-left">
+    <section class="login-left" data-reveal="write">
 
-        <div class="login-top">
-    <span class="chapter">CHAPTER 01</span>
-    <span class="login-label">LOG IN</span>
-</div>
+        <div class="chapter" data-reveal="write">
+            <div class="rule rule--heavy"></div>
+            <div class="faq_s1top">
+                <p class="faq_s1topleft">CHAPTER 01</p>
+                <p class="faq_s1topright">CONTACT</p>
+            </div>
+            <div class="rule" style="--sd:120ms"></div>
+        </div>
 
-        <h1>Welcome back.</h1>
+        <h1 data-write>Welcome back.</h1>
 
-        <p class="intro-text">
+        <p class="intro-text" data-write="word">
             Your finished translations, your order history and your invoices are all behind this door.
         </p>
 
@@ -144,23 +150,15 @@
 
             <div class="form-group">
                 <label for="email">EMAIL ADDRESS</label>
-                <input
-                    type="email"
-                    id="email"
-                    value="a.hartley@outlook.com"
-                >
+                <input type="email" id="email" placeholder="a.hartley@outlook.com">
             </div>
 
             <div class="form-group">
                 <label for="password">PASSWORD</label>
-                <input
-                    type="password"
-                    id="password"
-                    value="password123"
-                >
+                <input type="password" id="password" placeholder="password123">
             </div>
 
-            <a href="#" class="forgot-password">
+            <a href="forgotpass.html" class="forgot-password">
                 Forgot your password?
             </a>
 
@@ -172,14 +170,14 @@
 
         <p class="create-account">
             No account yet?
-            <a href="#">Create one</a>
+            <a href="signup.html">Create one</a>
         </p>
 
     </section>
 
 
     <!-- RIGHT SIDE -->
-    <section class="login-right">
+    <section class="login-right" data-reveal="write">
 
         <div class="right-content">
 
@@ -187,22 +185,18 @@
                 WHY AN ACCOUNT?
             </span>
 
-            <h2>
+            <h2 data-write>
                 This is where your<br>
                 translations live.
             </h2>
 
-            <p>
+            <p data-write="word">
                 Finished files stay downloadable, invoices sit
                 alongside them, and nothing is retained beyond
                 the account that ordered it.
             </p>
 
-            <img
-                src="img/account portal.png"
-                alt="Library"
-                class="account-image"
-            >
+            <img src="img/account portal.png" alt="Library" class="account-image">
 
         </div>
 
@@ -307,6 +301,7 @@
     <script src="uiframe/js/flickity.pkgd.min.js"></script>   
     <script src="uiframe/js/aos.js"></script>
     <script src="./uiframe/js/home-js.js"></script>
+    <script src="./uiframe/js/motion.js"></script>
     <script>
       $(document).ready(function () {
           $(".navbar-toggler").click(function () {

@@ -125,16 +125,20 @@
    </header>
   
    <main class="new-password-page">
-    <section class="new-password-left">
+    <section class="new-password-left" data-reveal="write">
 
-        <div class="new-password-top">
-            <span class="new-password-chapter">CHAPTER 01</span>
-            <span class="new-password-label">NEW PASSWORD</span>
+        <div class="chapter" data-reveal="write">
+            <div class="rule rule--heavy"></div>
+            <div class="faq_s1top">
+                <p class="faq_s1topleft">CHAPTER 01</p>
+                <p class="faq_s1topright">CONTACT</p>
+            </div>
+            <div class="rule" style="--sd:120ms"></div>
         </div>
 
-        <h1>Set a new password.</h1>
+        <h1 data-write>Set a new password.</h1>
 
-        <p class="new-password-intro">
+        <p class="new-password-intro" data-write="word">
             Choose something you have not used elsewhere. Both fields have to match before you can save.
         </p>
 
@@ -142,20 +146,12 @@
 
             <div class="new-password-field">
                 <label for="newPassword">NEW PASSWORD</label>
-                <input
-                    type="password"
-                    id="newPassword"
-                    value="password123"
-                >
+                <input type="password" id="newPassword" placeholder="password123">
             </div>
 
             <div class="new-password-field">
                 <label for="confirmNewPassword">CONFIRM NEW PASSWORD</label>
-                <input
-                    type="password"
-                    id="confirmNewPassword"
-                    value="password123"
-                >
+                <input type="password" id="confirmNewPassword" placeholder="password123">
             </div>
 
             <button type="submit" class="new-password-button">
@@ -166,7 +162,7 @@
 
         <p class="new-password-login">
             Changed your mind?
-            <a href="#">Back to log in</a>
+            <a href="login.html">Back to log in</a>
         </p>
 
     </section>
@@ -179,22 +175,18 @@
                 AFTER YOU SAVE
             </span>
 
-            <h2>
+            <h2 data-write>
                 You stay signed in<br>
                 on this device.
             </h2>
 
-            <p>
+            <p data-write="word">
                 Saving a new password signs out every other
                 device on the account. If that was not you, that is
                 exactly what you want.
             </p>
 
-            <img
-                src="img/new password.png"
-                alt="Writing a new password"
-                class="new-password-image"
-            >
+            <img src="img/new password.png" alt="Writing a new password" class="new-password-image">
 
         </div>
 

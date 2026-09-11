@@ -125,16 +125,20 @@
    </header>
   
   <main class="reset-page">
-    <section class="reset-left">
+    <section class="reset-left" data-reveal="write">
 
-        <div class="reset-top">
-            <span class="reset-chapter">CHAPTER 01</span>
-            <span class="reset-label">FORGOT PASSWORD</span>
+        <div class="chapter" data-reveal="write">
+            <div class="rule rule--heavy"></div>
+            <div class="faq_s1top">
+                <p class="faq_s1topleft">CHAPTER 01</p>
+                <p class="faq_s1topright">CONTACT</p>
+            </div>
+            <div class="rule" style="--sd:120ms"></div>
         </div>
 
-        <h1>Reset your password.</h1>
+        <h1 data-write>Reset your password.</h1>
 
-        <p class="reset-intro">
+        <p class="reset-intro" data-write="word">
             Tell us the email address on the account and we will send you a link to set a new password.
         </p>
 
@@ -142,11 +146,7 @@
 
             <div class="reset-field">
                 <label for="resetEmail">EMAIL ADDRESS</label>
-                <input
-                    type="email"
-                    id="resetEmail"
-                    value="a.hartley@outlook.com"
-                >
+                <input type="email" id="resetEmail" placeholder="a.hartley@outlook.com">
             </div>
 
             <button type="submit" class="reset-button">
@@ -157,7 +157,7 @@
 
         <p class="reset-login">
             Remembered it?
-            <a href="#">Back to log in</a>
+            <a href="login.html">Back to log in</a>
         </p>
 
     </section>
@@ -170,22 +170,18 @@
                 A NOTE ON SECURITY
             </span>
 
-            <h2>
+            <h2 data-write>
                 The link works once,<br>
                 and not for long.
             </h2>
 
-            <p>
+            <p data-write="word">
                 Reset links expire and can only be used a single
                 time. If you did not ask for one, ignore the email
                 and nothing about your account changes.
             </p>
 
-            <img
-                src="img/reset password.png"
-                alt="Security"
-                class="reset-image"
-            >
+            <img src="img/reset password.png" alt="Security" class="reset-image">
 
         </div>
 
@@ -206,7 +202,7 @@
             It works once and it expires, so use it while you are here.
         </p>
 
-        <button type="button" class="reset-success-button">
+        <button class="reset-success-button" href="login.html">
             Back to log in
         </button>
 
