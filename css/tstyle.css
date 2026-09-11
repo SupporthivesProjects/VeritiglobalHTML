@@ -1863,7 +1863,9 @@ letter-spacing: -0.4px;
 }
 
 
-
+.for_flex1_t {
+    flex: 1;
+}
 
 
 
