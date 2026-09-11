@@ -23,7 +23,7 @@
     padding: 179px 0 72px;
 }
 
-.translation-section > .container {
+.translation-section>.container {
     display: flex;
     flex-direction: column;
     align-items: stretch;
@@ -53,7 +53,7 @@
     line-height: 140%;
     letter-spacing: 1.92px;
     text-transform: uppercase;
-        margin-bottom: 0px;
+    margin-bottom: 0px;
 
 }
 
@@ -66,7 +66,7 @@
     line-height: 140%;
     letter-spacing: 1.92px;
     text-transform: uppercase;
-            margin-bottom: 0px;
+    margin-bottom: 0px;
 
 }
 
@@ -82,8 +82,8 @@
     gap: 24px;
     justify-content: space-between;
     align-self: stretch;
-padding-top: 32px;
- }
+    padding-top: 32px;
+}
 
 
 .translation-title {
@@ -115,12 +115,12 @@ padding-top: 32px;
 /* =========================================================
    MAIN LAYOUT
    ========================================================= */
-.translation-configurator{
+.translation-configurator {
     display: flex;
-padding: 104px 0px;
-flex-direction: column;
-align-items: flex-start;
-align-self: stretch;
+    padding: 104px 0px;
+    flex-direction: column;
+    align-items: flex-start;
+    align-self: stretch;
 }
 
 
@@ -351,26 +351,18 @@ align-self: stretch;
 
 /* SELECTED RADIO CIRCLE */
 
-.translation-configurator
-.service-card:has(input[type="radio"]:checked)
-.radio-control,
+.translation-configurator .service-card:has(input[type="radio"]:checked) .radio-control,
 
-.translation-configurator
-.delivery-card:has(input[type="radio"]:checked)
-.radio-control {
+.translation-configurator .delivery-card:has(input[type="radio"]:checked) .radio-control {
     border: 1.5px solid var(--brand-seal);
 }
 
 
 /* INNER DOT */
 
-.translation-configurator
-.service-card:has(input[type="radio"]:checked)
-.radio-control::after,
+.translation-configurator .service-card:has(input[type="radio"]:checked) .radio-control::after,
 
-.translation-configurator
-.delivery-card:has(input[type="radio"]:checked)
-.radio-control::after {
+.translation-configurator .delivery-card:has(input[type="radio"]:checked) .radio-control::after {
     content: "";
 
     width: 8px;
@@ -388,6 +380,7 @@ align-self: stretch;
 .translation-configurator .delivery-card:hover {
     border-color: var(--brand-seal);
 }
+
 /* =========================================================
    DOCUMENT
    ========================================================= */
@@ -425,12 +418,13 @@ align-self: stretch;
 }
 
 .translation-configurator .document-name {
-color: var(--brand-ink, #211E1B);
-font-family: "Work Sans";
-font-size: 17px;
-font-style: normal;
-font-weight: 400;
-line-height: 155%; /* 26.35px */
+    color: var(--brand-ink, #211E1B);
+    font-family: "Work Sans";
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 155%;
+    /* 26.35px */
 }
 
 .translation-configurator .replace-file {
@@ -438,15 +432,16 @@ line-height: 155%; /* 26.35px */
 
     border: 0;
     background: transparent;
-color: var(--brand-seal, #AF2419);
-text-align: right;
-font-family: "Work Sans";
-font-size: 12px;
-font-style: normal;
-font-weight: 600;
-line-height: 140%; /* 16.8px */
-letter-spacing: 1.92px;
-text-transform: uppercase;
+    color: var(--brand-seal, #AF2419);
+    text-align: right;
+    font-family: "Work Sans";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 140%;
+    /* 16.8px */
+    letter-spacing: 1.92px;
+    text-transform: uppercase;
 }
 
 
@@ -490,12 +485,13 @@ text-transform: uppercase;
 
     background: #fff;
 
-color: var(--brand-ink, #211E1B);
-font-family: "Work Sans";
-font-size: "17px";
-font-style: normal;
-font-weight: 400;
-line-height: 155%; /* 26.35px */
+    color: var(--brand-ink, #211E1B);
+    font-family: "Work Sans";
+    font-size: "17px";
+    font-style: normal;
+    font-weight: 400;
+    line-height: 155%;
+    /* 26.35px */
     outline: none;
 }
 
@@ -589,7 +585,7 @@ line-height: 155%; /* 26.35px */
     background: transparent;
 
     color: var(--brand-ink-soft);
-border-bottom: 1px solid var(--brand-paper-deep, #D6C6B4);
+    border-bottom: 1px solid var(--brand-paper-deep, #D6C6B4);
     font-family: "Work Sans", sans-serif;
     font-size: 17px;
     font-weight: 400;
@@ -753,18 +749,14 @@ border-bottom: 1px solid var(--brand-paper-deep, #D6C6B4);
 
 /* SELECTED RADIO */
 
-.translation-configurator
-.delivery-card:has(input[type="radio"]:checked)
-.radio-control {
+.translation-configurator .delivery-card:has(input[type="radio"]:checked) .radio-control {
     border: 1.5px solid var(--brand-seal);
 }
 
 
 /* SELECTED DOT */
 
-.translation-configurator
-.delivery-card:has(input[type="radio"]:checked)
-.radio-control::after {
+.translation-configurator .delivery-card:has(input[type="radio"]:checked) .radio-control::after {
     content: "";
 
     width: 8px;
@@ -796,11 +788,11 @@ border-bottom: 1px solid var(--brand-paper-deep, #D6C6B4);
 .translation-configurator .quote-card__header {
     display: flex;
 
-padding: 40px 40px 32px 40px;
+    padding: 40px 40px 32px 40px;
 
     flex-direction: column;
     align-items: flex-start;
-border-bottom: 1px solid var(--brand-paper-deep, #D6C6B4);
+    border-bottom: 1px solid var(--brand-paper-deep, #D6C6B4);
 }
 
 .translation-configurator .quote-label {
@@ -907,9 +899,9 @@ border-bottom: 1px solid var(--brand-paper-deep, #D6C6B4);
 }
 
 .translation-configurator .add-to-cart:hover {
-border-radius: var(--radius-xs, 4px);
-background: var(--brand-ink, #211E1B);
-color: var(--brand-paper, #F3E8D5);
+    border-radius: var(--radius-xs, 4px);
+    background: var(--brand-ink, #211E1B);
+    color: var(--brand-paper, #F3E8D5);
 
 }
 
@@ -931,5 +923,365 @@ color: var(--brand-paper, #F3E8D5);
     opacity: .55;
 }
 
+
+/* =========================================================
+   CART
+   ========================================================= */
+
+.cart-content {
+    width: 100%;
+    padding: 104px 0;
+    background: var(--Base-White, #FFF);
+}
+
+.cart-layout {
+    display: flex;
+    width: 100%;
+    align-items: stretch;
+    gap: 96px;
+}
+
+
+/* =========================================================
+   CART ITEMS
+   ========================================================= */
+
+.cart-items {
+    display: flex;
+    flex: 1 1 auto;
+    min-width: 0;
+
+    flex-direction: column;
+    align-items: stretch;
+
+    background: var(--Base-White, #FFF);
+}
+
+.cart-items__header {
+    display: flex;
+    width: 100%;
+    padding: 0 0 16px;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--brand-ink-soft, #3E3830);
+    font-family: "Work Sans";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 140%;
+    /* 16.8px */
+    letter-spacing: 1.92px;
+    text-transform: uppercase;
+    border-bottom: 2px solid var(--brand-ink, #211E1B);
+}
+
+
+/* =========================================================
+   CART ITEM
+   ========================================================= */
+
+.cart-item-card {
+    display: flex;
+    width: 100%;
+    padding: 32px 0px;
+    flex-direction: column;
+    align-items: stretch;
+    border-top: 1px solid var(--brand-paper-deep, #D6C6B4);
+}
+
+.cart-item-card__header {
+    display: flex;
+    width: 100%;
+
+    align-items: flex-start;
+    justify-content: space-between;
+
+    gap: 24px;
+}
+
+.cart-item-card__title {
+    color: var(--brand-ink, #211E1B);
+
+    font-family: "DM Serif Display", serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%;
+}
+
+.cart-item-card__right {
+    flex: 0 0 auto;
+}
+
+.cart-item-card__price {
+    color: var(--brand-ink, #211E1B);
+    text-align: right;
+    font-family: "DM Serif Display";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%;
+    /* 31.2px */
+}
+
+.cart-item-card__details {
+    margin-top: 8px;
+
+    color: var(--brand-ink-soft, #3E3830);
+
+    font-family: "Work Sans", sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 150%;
+}
+
+.cart-item-card__remove {
+    width: fit-content;
+
+    margin-top: 8px;
+    padding: 0;
+
+    border: 0;
+    background: transparent;
+    color: var(--brand-ink-soft, #3E3830);
+    font-family: "Work Sans";
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    /* 22.5px */
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-decoration-skip-ink: auto;
+    text-decoration-thickness: auto;
+    text-underline-offset: auto;
+    text-underline-position: from-font;
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   ADD DOCUMENT
+   ========================================================= */
+
+.cart-add-document {
+    width: fit-content;
+
+    margin-top: 40px;
+    display: flex;
+    padding: 16px 32px;
+    align-items: center;
+    gap: 14px;
+    border-radius: var(--radius-xs, 4px);
+    border: 1px solid var(--brand-ink, #211E1B);
+    background: var(--Base-White, #FFF);
+    color: var(--brand-ink, #211E1B);
+    font-family: "Work Sans";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 140%;
+    /* 25.2px */
+    cursor: pointer;
+}
+
+.cart-add-document:hover {
+    background: var(--brand-ink, #211E1B);
+    color: var(--Base-White, #FFF);
+}
+
+
+/* =========================================================
+   CART SUMMARY
+   ========================================================= */
+
+.cart-summary {
+    display: flex;
+    width: 520px;
+    flex: 0 0 520px;
+    height: fit-content;
+    flex-direction: column;
+    align-items: stretch;
+    border-radius: var(--radius-xs, 4px);
+    background: var(--brand-paper-tint, #F4EEE3);
+}
+
+
+/* SUMMARY TITLE */
+
+.cart-summary__title {
+    display: flex;
+    padding: 40px 40px 24px 40px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    align-self: stretch;
+    color: var(--brand-seal, #AF2419);
+    font-family: "Work Sans";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 140%;
+    /* 16.8px */
+    letter-spacing: 1.92px;
+    text-transform: uppercase;
+}
+
+
+/* SUMMARY DETAILS */
+
+.cart-summary__details {
+    display: flex;
+
+    padding: 0 40px;
+
+    flex-direction: column;
+}
+
+.cart-summary__row {
+    display: flex;
+    width: 100%;
+
+    padding: 14px 0;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 16px;
+    border-bottom: 1px solid var(--brand-paper-deep, #D6C6B4);
+    color: var(--brand-ink-soft, #3E3830);
+    font-family: "Work Sans";
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    /* 22.5px */
+}
+
+.cart-summary__row span:last-child {
+    flex: 0 0 auto;
+    text-align: right;
+    color: var(--brand-ink, #211E1B);
+    font-family: "Work Sans";
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    /* 22.5px */
+}
+
+
+/* =========================================================
+   TOTAL
+   ========================================================= */
+
+.cart-summary__total {
+    display: flex;
+
+    padding: 28px 40px;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 16px;
+
+    border-top: 2px solid var(--brand-ink, #211E1B);
+    color: var(--brand-ink, #211E1B);
+
+    font-family: "DM Serif Display", serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 130%;
+}
+
+.cart-summary__total strong {
+    font-weight: 400;
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   CHECKOUT
+   ========================================================= */
+
+.cart-summary__checkout {
+    display: flex;
+    margin: 8px 40px 0;
+    padding: 16px 32px;
+    align-items: center;
+    gap: 14px;
+    align-self: stretch;
+    border: 0;
+    border-radius: var(--radius-xs, 4px);
+    background: var(--brand-seal, #AF2419);
+    color: var(--Base-White, #FFF);
+    font-family: "Work Sans";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 140%;
+    /* 25.2px */
+
+    cursor: pointer;
+
+    transition: background-color .2s ease;
+}
+
+.cart-summary__checkout:hover {
+border-radius: var(--radius-xs, 4px);
+background: var(--brand-ink, #211E1B);
+color: var(--brand-paper, #F3E8D5);
+font-family: "Work Sans";
+font-size: 18px;
+font-style: normal;
+font-weight: 500;
+line-height: 140%; /* 25.2px */
+}
+
+
+/* =========================================================
+   PAYMENT
+   ========================================================= */
+
+.cart-summary__payment {
+    display: flex;
+
+    padding: 16px 40px 40px;
+
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cart-summary__security {
+    color: var(--brand-ink-soft, #3E3830);
+    font-family: "Work Sans";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 140%;
+    /* 16.8px */
+    letter-spacing: 1.92px;
+    text-transform: uppercase;
+}
+
+.cart-summary__payment-logos {
+  display: flex;
+align-items: end;
+gap: 24px;
+}
+
+
+/* VISA */
+
+.payment-logo--visa {
+color: var(--brand-ink, #211E1B);
+font-family: "Work Sans";
+font-size: 15px;
+font-style: normal;
+font-weight: 700;
+line-height: 120%; /* 18px */
+letter-spacing: 0.9px;
+opacity: 0.7;
+}
 
 
