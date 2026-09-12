@@ -411,6 +411,12 @@
         padding: 14px 20px 28px;
     }
 
+.cart-summary__payment_cards{
+
+        padding: 14px 20px 28px;
+    }
+
+
     /* CHECKOUT */
 
     .cart-checkout {

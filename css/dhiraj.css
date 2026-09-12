@@ -1244,7 +1244,7 @@
    PAYMENT
    ========================================================= */
 
-.cart-summary__payment {
+.cart-summary__payment_cards{
     display: flex;
 
     padding: 16px 40px 40px;
