@@ -1663,7 +1663,7 @@ line-height: 155%; /* 32.55px */
     --multi: 'Work Sans', 'Noto Sans', 'Noto Sans JP', 'Noto Sans SC', 'Noto Sans Arabic', 'Hiragino Sans', 'PingFang SC', 'Malgun Gothic', 'Segoe UI', Arial, sans-serif;
     --multi-serif: 'DM Serif Display', 'Noto Serif', 'Hiragino Mincho ProN', 'Songti SC', Georgia, serif;
 
-    --gutter: clamp(20px, 6vw, 240px);
+    --gutter: clamp(24px, 6vw, 240px);
     --maxw: 1440px;
 
     --fs-h1: clamp(40px, 4.15vw, 80px);
