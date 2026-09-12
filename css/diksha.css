@@ -638,7 +638,7 @@ body {
 .error404-section {
   width: 100%;
   min-height: 862.71px;
-  margin-top: 0;
+  margin-top:176px;
   
   background: #f3e8d5 url("../img/404.png") center / cover no-repeat;
   box-sizing: border-box;
@@ -971,48 +971,6 @@ opacity: 1;
   }
 }
 
-@media only screen and (min-width: 1600px) and (max-width: 1699px) {
-  .error404-section,
-  .error404-followup {
-    padding-left: 180px;
-    padding-right: 180px;
-  }
-}
-
-@media only screen and (min-width: 1700px) and (max-width: 1799px) {
-  .error404-section,
-  .error404-followup {
-    padding-left: 200px;
-    padding-right: 200px;
-  }
-}
-
-@media only screen and (min-width: 1800px) and (max-width: 1919px) {
-  .error404-section,
-  .error404-followup {
-    padding-left: 220px;
-    padding-right: 220px;
-  }
-}
-
-@media only screen and (min-width: 1920px) and (max-width: 2600px) {
-  .error404-section,
-  .error404-followup {
-    padding-left: 240px;
-    padding-right: 240px;
-  }
-}
-
-@media (max-width: 991px) {
-  .error404-section {
-    min-height: calc(100vh - 190px);
-    padding: 100px 48px;
-  }
-
-  .error404-inner {
-    min-height: 0;
-  }
-}
 
 @media (max-width: 600px) {
   .error404-section {
@@ -1151,11 +1109,23 @@ opacity: 1;
 
 @media only screen and (max-width: 600px) {
   .error404-section {
-    width: 100%;
-    min-height: 711.53px;
+    /*margin-top: 64px;
+    width: 100%;min-height: 711.53px;
     padding: 64px 24px;
     background: #f3e8d5 url("../img/404.png") center / cover no-repeat;
     box-sizing: border-box;
+    width: 375;*/
+    margin-top: 69px;
+    height: 711.532958984375;
+    angle: 0 deg;
+    opacity: 1;
+    padding-top: 64px;
+    padding-right: 24px;
+    padding-bottom: 64px;
+    padding-left: 24px;
+    gap: 18px;
+    background: #F3E8D5;
+
   }
 
   .error404-inner {
@@ -1405,7 +1375,7 @@ opacity: 1;
   }
 }
 
-/* Mobile legal template. Desktop rules above remain unchanged. */
+/* Mobile legal template. */
 @media only screen and (max-width: 600px) {
   .header-top .navbar,
   .header-top.scrolled .navbar {
