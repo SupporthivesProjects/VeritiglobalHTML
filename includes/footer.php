@@ -86,17 +86,17 @@
     </div>
 </footer>
 </div>
-    <script src="../uiframe/js/jquery.min.js"></script>
-    <script src="../uiframe/js/bootstrap.bundle.min.js"></script>
-    <script src="../uiframe/js/popper.min.js"></script>
-    <script src="../uiframe/js/slick.js"></script>
-    <script src="../uiframe/js/owl.carousel.js"></script>
-    <script src="../uiframe/js/swiper-bundle.min.js"></script>
-    <script src="../uiframe/js/flickity.pkgd.min.js"></script>   
-    <script src="../uiframe/js/aos.js"></script>
-    <script src="../uiframe/js/home-js.js"></script>
+    <script src="./uiframe/js/jquery.min.js"></script>
+    <script src="./uiframe/js/bootstrap.bundle.min.js"></script>
+    <script src="./uiframe/js/popper.min.js"></script>
+    <script src="./uiframe/js/slick.js"></script>
+    <script src="./uiframe/js/owl.carousel.js"></script>
+    <script src="./uiframe/js/swiper-bundle.min.js"></script>
+    <script src="./uiframe/js/flickity.pkgd.min.js"></script>   
+    <script src="./uiframe/js/aos.js"></script>
+    <script src="./uiframe/js/home-js.js"></script>
     <!-- Motion -->
-    <script src="./uiframe/js/motion.js"></script>
+    <script src="../uiframe/js/motion.js"></script>
     <script>
       $(document).ready(function () {
           $(".navbar-toggler").click(function () {
