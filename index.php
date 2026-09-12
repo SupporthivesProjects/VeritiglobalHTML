@@ -962,8 +962,8 @@
 
 
 
-<script src="/uiframe/js/assets.js"></script>
-<script src="/uiframe/js/motion.js"></script>
-<script src="/uiframe/js/nav.js"></script>
-<script src="/uiframe/js/preloader.js"></script>
-<script src="/uiframe/js/page-home.js"></script>
+<script src="./uiframe/js/assets.js"></script>
+<script src="./uiframe/js/motion.js"></script>
+<script src="./uiframe/js/nav.js"></script>
+<script src="./uiframe/js/preloader.js"></script>
+<script src="./uiframe/js/page-home.js"></script>
