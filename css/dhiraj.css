@@ -1939,3 +1939,400 @@ opacity: 0.72;}
     right: 1px;
     background: #aaa;
 }
+
+
+/* Payment Success */
+
+/* =========================================================
+   PAYMENT CONFIRMATION
+   ========================================================= */
+
+.payment-confirmation {
+    width: 100%;
+    background: var(--brand-paper-light, #FCFAF8);
+    padding: 179px 0 0;}
+
+
+/* =========================================================
+   CONFIRMATION CARD
+   ========================================================= */
+
+.payment-confirmation__card {
+    display: flex;
+
+    width: 100%;
+
+    padding: 104px 0;
+
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+
+/* =========================================================
+   RECEIVED IMAGE
+   ========================================================= */
+
+.payment-confirmation__stamp {
+    display: flex;
+
+    width: 150px;
+    height: 150px;
+
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 32px;
+}
+
+.payment-confirmation__stamp img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+}
+
+
+/* =========================================================
+   ORDER NUMBER
+   ========================================================= */
+
+.payment-confirmation__order {
+    margin-bottom: 32px;
+
+    color: var(--Base-Success-Green, #47B147);
+
+    font-family: "Work Sans", sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 140%;
+
+    letter-spacing: 1.92px;
+
+    text-transform: uppercase;
+}
+
+
+/* =========================================================
+   TITLE
+   ========================================================= */
+
+.payment-confirmation__title {
+    margin: 0;
+
+    color: var(--brand-ink, #211E1B);
+
+    text-align: center;
+
+    font-family: "DM Serif Display", serif;
+    font-size: 56px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%;
+
+    letter-spacing: -0.56px;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+   ========================================================= */
+
+.payment-confirmation__description {
+    max-width: 760px;
+
+    margin: 32px 0px 0px;
+
+    color: var(--brand-ink-soft, #3E3830);
+
+    text-align: center;
+
+    font-family: "Work Sans", sans-serif;
+    font-size: 21px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 155%;
+}
+
+
+/* =========================================================
+   ACTIONS
+   ========================================================= */
+
+.payment-confirmation__actions {
+    display: flex;
+    margin-top:48px;
+    align-items: center;
+    justify-content: center;
+    gap:20px;
+    max-width: 432px;
+    width: 100%;
+}
+
+
+/* =========================================================
+   BUTTON
+   ========================================================= */
+
+.payment-confirmation__button {
+    display: flex;
+
+padding: 16px 32px;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: var(--radius-xs, 4px);
+
+    font-family: "Work Sans", sans-serif;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 140%;
+
+    text-decoration: none;
+
+    transition:
+        background-color .2s ease,
+        color .2s ease,
+        border-color .2s ease;
+}
+
+
+/* =========================================================
+   PRIMARY BUTTON
+   ========================================================= */
+
+.payment-confirmation__button--primary {
+border-radius: var(--radius-xs, 4px);
+background: var(--brand-seal, #AF2419);
+
+    color: var(--Base-White, #FFF);
+    min-width:191px;
+}
+
+.payment-confirmation__button--primary:hover {
+    border-color: var(--brand-ink, #211E1B);
+
+    background: var(--brand-ink, #211E1B);
+
+    color: var(--brand-paper, #F3E8D5);
+}
+
+
+/* =========================================================
+   SECONDARY BUTTON
+   ========================================================= */
+
+.payment-confirmation__button--secondary {
+    border: 1px solid var(--brand-ink-soft, #3E3830);
+
+    background: transparent;
+
+    color: var(--brand-ink-soft, #3E3830);
+width: 100%;
+}
+
+.payment-confirmation__button--secondary:hover {
+    border-color: var(--brand-ink, #211E1B);
+
+    background: var(--brand-ink, #211E1B);
+
+    color: var(--brand-paper, #F3E8D5);
+}
+
+
+
+/* =========================================================
+   THREE THINGS HAPPEN NEXT
+   ========================================================= */
+
+.next-steps {
+    width: 100%;
+    padding: 104px 0;
+
+    background: var(--Base-White, #FFF);
+}
+
+
+/* =========================================================
+   INNER
+   ========================================================= */
+
+.next-steps__inner {
+    display: flex;
+    width: 100%;
+
+    flex-direction: column;
+    align-items: stretch;
+}
+
+
+/* =========================================================
+   TITLE
+   ========================================================= */
+
+.next-steps__title {
+    margin: 0 0 40px;
+
+    color: var(--brand-ink, #211E1B);
+
+    font-family: "DM Serif Display", serif;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 125%;
+    letter-spacing: -0.4px;
+}
+
+
+/* =========================================================
+   ITEMS
+   ========================================================= */
+
+.next-steps__list {
+    display: flex;
+    width: 100%;
+justify-content: space-between;
+    align-items: stretch;
+}
+
+
+.next-steps__item {
+    display: flex;
+    min-width: 0;
+    width: 480px;
+    padding: 0 48px;
+
+    flex-direction: column;
+    align-items: flex-start;
+
+    border-left: 1px solid var(
+        --brand-paper-deep,
+        #D6C6B4
+    );
+}
+
+
+/* First card doesn't need left border */
+
+.next-steps__item:first-child {
+    padding-left: 0;
+    border-left: 0;
+}
+
+
+/* Last card */
+
+.next-steps__item:last-child {
+    padding-right: 0;
+}
+
+
+/* =========================================================
+   NUMBER
+   ========================================================= */
+
+.next-steps__number {
+    margin-bottom:14px;
+
+    color: var(--brand-seal, #AF2419);
+
+    font-family: "DM Serif Display", serif;
+    font-size: 17px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 140%;
+}
+
+
+/* =========================================================
+   HEADING
+   ========================================================= */
+
+.next-steps__heading {
+    margin: 0;
+
+    color: var(--brand-ink, #211E1B);
+
+    font-family: "DM Serif Display", serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%;
+}
+
+
+/* =========================================================
+   TEXT
+   ========================================================= */
+
+.next-steps__text {
+    margin:14px 0 0px;
+
+    color: var(--brand-ink-soft, #3E3830);
+
+    font-family: "Work Sans", sans-serif;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 155%;
+}
+
+
+.payment_red_not{
+    color: var(--brand-ink-soft, #3E3830);
+
+}
+
+
+.brn_uncuuse{
+    min-width: fit-content;
+}
+
+
+.unsucess_btn_div{
+        max-width: 442px;
+
+}
+
+
+    .lower_unsucces_box{
+        border-radius: var(--radius-xs, 4px);
+background: var(--brand-paper-tint, #F4EEE3);
+display: flex;
+padding: 32px;
+flex-direction: column;
+align-items: flex-start;
+gap: 12px;
+align-self: stretch;
+margin-top: 40px;
+    }
+
+    .red_typo{
+        color: var(--brand-seal, #AF2419);
+
+/* body / label */
+font-family: "Work Sans";
+font-size: 12px;
+font-style: normal;
+font-weight: 600;
+line-height: 140%; /* 16.8px */
+letter-spacing: 1.92px;
+text-transform: uppercase;
+margin-bottom: 0px;
+    }
+
+    .beloww_line{
+        color: var(--brand-ink-soft, #3E3830);
+font-family: "Work Sans";
+font-size: 17px;
+font-style: normal;
+font-weight: 400;
+line-height: 155%; /* 26.35px */
+margin-bottom: 0px;
+    }
+    
