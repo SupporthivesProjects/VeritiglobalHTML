@@ -16,11 +16,11 @@
     opacity: 1 !important
 }
 
-/* .ms-strike,
+.ms-strike,
   .ms-proofed,
   .stamp {
     display: none
-  } */
+  }
 .only_for_me section {
     padding: 0px;
 }
@@ -1641,7 +1641,9 @@ line-height: 155%; /* 32.55px */
     }
 }
 
-:root {
+
+.only_for_me {
+/* :root { */
     --cream: #f2e7d4;
     --cream-2: #f3e8d5;
     --paper: #fcfaf8;
@@ -1661,7 +1663,7 @@ line-height: 155%; /* 32.55px */
     --multi: 'Work Sans', 'Noto Sans', 'Noto Sans JP', 'Noto Sans SC', 'Noto Sans Arabic', 'Hiragino Sans', 'PingFang SC', 'Malgun Gothic', 'Segoe UI', Arial, sans-serif;
     --multi-serif: 'DM Serif Display', 'Noto Serif', 'Hiragino Mincho ProN', 'Songti SC', Georgia, serif;
 
-    --gutter: clamp(20px, 6vw, 240px);
+    --gutter: clamp(24px, 6vw, 240px);
     --maxw: 1440px;
 
     --fs-h1: clamp(40px, 4.15vw, 80px);
