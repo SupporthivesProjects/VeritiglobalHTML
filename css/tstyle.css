@@ -1642,8 +1642,8 @@ line-height: 155%; /* 32.55px */
 }
 
 
-
-:root {
+.only_for_me {
+/* :root { */
     --cream: #f2e7d4;
     --cream-2: #f3e8d5;
     --paper: #fcfaf8;
