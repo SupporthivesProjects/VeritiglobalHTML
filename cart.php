@@ -216,7 +216,7 @@ Your cart.                </h1>
                 </button>
 
 
-                <div class="cart-summary__payment">
+                <div class="cart-summary__payment_cards">
 
                     <span class="cart-summary__security">
                         WE ACCEPT
