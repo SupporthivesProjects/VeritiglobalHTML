@@ -14,7 +14,7 @@
                             </div>
                             <div class="ct_line2 rule"></div>
                         </div>
-                        <div class="ct_out2">
+                        <div class="ct_out2 hero-stack is-in" data-reveal="write" data-reveal-after="preloader">
                             <div class="ct_inside2">
                                 <h1 class="ct_head h1" data-write="" data-split="1">Thirty languages, in their own hands.</h1>
                                 <p class="ct_p4">We translate into and out of every language on this list. We only offer languages we can cover properly, which is why the list is thirty and not three hundred.</p>
