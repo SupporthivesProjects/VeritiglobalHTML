@@ -2,29 +2,27 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap');
 
 
-/* --------- External Library  CSS -------- */
-@import url(.hamburgers.css);
-@import url(../uiframe/css/bootstrap.min.css);
-@import url(../uiframe/css/animate.min.css);
-@import url(../uiframe/css/font-awesome.min.css);
-@import url(../uiframe/css/aos.css);
+/* --------- External Library CSS --------- */
 
-/* --------- External Slider  CSS -------- */
+@import url('../uiframe/css/bootstrap.min.css');
+@import url('../uiframe/css/animate.min.css');
+@import url('../uiframe/css/font-awesome.min.css');
+@import url('../uiframe/css/aos.css');
+@import url('../uiframe/css/bootstrap-icons.css');
+@import url('./hamburgers.css');
 
-@import url(../css/owl.carousel.min.css);
-@import url(./owl.theme.default.css);
-@import url(./swiper-bundle.min.css);
-@import url(../uiframe/css/slick.css);
-@import url(../uiframe/css/slick-theme.css);
 
-/* --------- developer  css -------- */
+/* --------- External Slider CSS --------- */
 
-/* External Slider CSS */
 @import url('./owl.carousel.min.css');
 @import url('./owl.theme.default.css');
 @import url('./swiper-bundle.min.css');
+@import url('../uiframe/css/slick.css');
+@import url('../uiframe/css/slick-theme.css');
 
-/* Developer CSS */
+
+/* --------- Developer CSS --------- */
+
 @import url('./dhiraj.css');
 @import url('./dhirajresponsive.css');
 @import url('./tstyle.css');
