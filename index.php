@@ -1,6 +1,969 @@
+<!-- please put this script at top and not bottom -->
+
+<script>
+  /* ============================================================
+     PRELOADER GATE — runs before first paint so inner pages never
+     flash the cream overlay. Edit PRELOADER to change the rules.
+     ============================================================ */
+  window.PRELOADER = {
+    homepageOnly: true, // false = play on every page
+    oncePerSession: false // true  = skip for the rest of the browser session
+  };
+  (function () {
+    var P = window.PRELOADER,
+      root = document.documentElement,
+      run = true;
+
+    // The page declares itself, rather than the script guessing from the URL.
+    // Homepage:    <html lang="en" data-page="home">
+    // Inner pages: <html lang="en">            (or data-page="services", etc.)
+    // This survives renamed files, preview panels, staging paths and subfolders.
+    if (P.homepageOnly && root.getAttribute('data-page') !== 'home') {
+      run = false;
+    }
+
+    if (run && P.oncePerSession) {
+      try {
+        if (sessionStorage.getItem('vg-preloader') === 'seen') {
+          run = false;
+        } else {
+          sessionStorage.setItem('vg-preloader', 'seen');
+        }
+      } catch (e) {
+        /* storage blocked, play it */
+      }
+    }
+
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      run = false;
+    }
+
+    document.documentElement.className += run ? ' pl-on' : ' pl-off';
+  })();
+</script>
+
+
+
+
+
 <?php include 'includes/header.php'; ?>
 
-<section></section>
-<section></section>
+
+    <!-- PRELOADER — the book opens, the word finds its English -->
+    <div id="preloader" role="status" aria-label="Loading">
+      <div class="pl-stage">
+        <div class="book" id="book">
+          <div class="bk-face-page bk-left">
+            <div class="bk-left-lines"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+          </div>
+          <div class="bk-face-page bk-right">
+            <div class="bk-word" id="bkWord"></div>
+          </div>
+          <div class="bk-spine"></div>
+          <div class="bk-cover">
+            <div class="bk-side bk-front">
+              <img src="./img/logo.svg" class="img-fluid">
+              <span class="wordmark">VERITI GLOBAL</span>
+            </div>
+            <div class="bk-side bk-back"></div>
+          </div>
+        </div>
+        <div class="pl-meta">
+          <span class="pl-label">TRANSLATION &amp; LOCALISATION</span>
+          <span class="pl-bar"><i id="plBar"></i></span>
+        </div>
+      </div>
+      <button class="pl-skip" id="plSkip" type="button" style="background-color: transparent;">SKIP</button>
+    </div>
+
+    <main id="top" class="only_for_me">
+
+      <!-- hERO -->
+      <section class="hero" id="hero">
+        <div class="hero-texture mobile_nonet"><img src="./img/texture_bg.png" class="img-fluid"></div>
+        <div class="hero-art mobile_nonet">
+          <img src="./img/book_bg_1.png" class="img-fluid">
+        </div>
+        <div class="hero-art desktop_nonet">
+          <img src="./img/book_bg_mob.png" class="img-fluid ">
+        </div>
+        <div class="hero-veil"></div>
+        <div class="hero-veil hero-veil--left"></div>
+        <div class="mobile_nonet">
+          <div class="hero-frame" aria-hidden="true">
+            <span class="fr-mark fr-tl"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                viewBox="0 0 24 24" fill="none">
+                <rect width="24" height="24" fill="#F3E8D5" />
+                <path d="M12 2V22" stroke="#AF2419" stroke-linecap="round" />
+                <path d="M22 12L2 12" stroke="#AF2419" stroke-linecap="round" />
+                <circle cx="12" cy="12" r="6.5" stroke="#AF2419" />
+              </svg></span>
+            <span class="fr-mark fr-tr"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                viewBox="0 0 24 24" fill="none">
+                <rect width="24" height="24" fill="#F3E8D5" />
+                <path d="M12 2V22" stroke="#AF2419" stroke-linecap="round" />
+                <path d="M22 12L2 12" stroke="#AF2419" stroke-linecap="round" />
+                <circle cx="12" cy="12" r="6.5" stroke="#AF2419" />
+              </svg></span>
+            <span class="fr-mark fr-bl"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                viewBox="0 0 24 24" fill="none">
+                <rect width="24" height="24" fill="#F3E8D5" />
+                <path d="M12 2V22" stroke="#AF2419" stroke-linecap="round" />
+                <path d="M22 12L2 12" stroke="#AF2419" stroke-linecap="round" />
+                <circle cx="12" cy="12" r="6.5" stroke="#AF2419" />
+              </svg></span>
+            <span class="fr-mark fr-br"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                viewBox="0 0 24 24" fill="none">
+                <rect width="24" height="24" fill="#F3E8D5" />
+                <path d="M12 2V22" stroke="#AF2419" stroke-linecap="round" />
+                <path d="M22 12L2 12" stroke="#AF2419" stroke-linecap="round" />
+                <circle cx="12" cy="12" r="6.5" stroke="#AF2419" />
+              </svg></span>
+          </div>
+        </div>
+
+
+        <div class="hero-inner">
+          <div class="wrap">
+            <div class="hero-copy">
+              <div class="hero-stack" data-reveal="write" data-reveal-after="preloader">
+                <p class="eyebrow"><svg class="mobile_nonet" xmlns="http://www.w3.org/2000/svg" width="13" height="13"
+                    viewBox="0 0 13 13" fill="none">
+                    <g clip-path="url(#clip0_13336_2596)">
+                      <path d="M6.5 1V12M1 6.5H12" stroke="#AF2419" stroke-width="1.4" stroke-linecap="round" />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_13336_2596">
+                        <rect width="13" height="13" fill="white" />
+                      </clipPath>
+                    </defs>
+                  </svg>TRANSLATION &amp; LOCALISATION</p>
+                <h1 class="h1" data-write>Every meaning,<br>carried <span class="it">intact.</span></h1>
+                <div class="hero-lead">
+                  <p class="lead" data-write="word">Precise translation. Thoughtful localisation. Every message lands
+                    with clarity, accuracy and cultural intelligence.</p>
+                  <span class="hero-rule mobile_nonet"></span>
+                </div>
+              </div>
+
+              <div class="hero-actions-stack" data-reveal="fade" data-reveal-after="preloader" style="--sd:420ms">
+                <div class="hero-actions">
+                  <a class="btn btn--primary" href="#cta">Request a translation <svg class="mobile_nonet"
+                      xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                      <path d="M3 9H14M10 4.5L14.5 9L10 13.5" stroke="white" stroke-width="1.5" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    </svg></a>
+                  <a class="btn btn--ghost" href="#principles">Read about us <svg class="mobile_nonet"
+                      xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                      <path d="M3 9H14M10 4.5L14.5 9L10 13.5" stroke="#211E1B" stroke-width="1.5" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    </svg></a>
+                </div>
+                <div class="">
+                  <div class="stats">
+                    <span class="divider mobile_nonet"></span>
+                    <div class="stat for_flex_one">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26" fill="none"
+                        class="mobile_nonet">
+                        <path
+                          d="M13 23C18.5228 23 23 18.5228 23 13C23 7.47715 18.5228 3 13 3C7.47715 3 3 7.47715 3 13C3 18.5228 7.47715 23 13 23Z"
+                          stroke="#AF2419" stroke-width="1.4" />
+                        <path d="M3 13H23" stroke="#AF2419" stroke-width="1.4" />
+                        <path
+                          d="M13 3C15.6 5.7 17 9.3 17 13C17 16.7 15.6 20.3 13 23C10.4 20.3 9 16.7 9 13C9 9.3 10.4 5.7 13 3Z"
+                          stroke="#AF2419" stroke-width="1.4" />
+                      </svg>
+                      <div style="display: flex; flex-direction: column; gap: 4px;" class="for_flex_one">
+                        <b>30</b><span>Languages<br class="mobile_nonet"> covered</span></div>
+                    </div>
+                    <span class="divider"></span>
+                    <div class="stat for_flex_one">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26" fill="none"
+                        class="mobile_nonet">
+                        <path
+                          d="M13 23C18.5228 23 23 18.5228 23 13C23 7.47715 18.5228 3 13 3C7.47715 3 3 7.47715 3 13C3 18.5228 7.47715 23 13 23Z"
+                          stroke="#AF2419" stroke-width="1.4" />
+                        <path d="M8.5 13.2L11.6 16.3L17.6 9.79999" stroke="#AF2419" stroke-width="1.4"
+                          stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+                      <div style="display: flex; flex-direction: column; gap: 4px;" class="for_flex_one"><b>72
+                          hrs</b><span>Standard<br>turnaround</span></div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mobile_nonet">
+          <div class="plaque" data-reveal="fade" data-reveal-after="preloader" style="--sd:700ms">
+            <div class="plaque-text">MEANING IS PRECIOUS.<br>ACCURACY IS OUR PROMISE.</div>
+            <span class="plaque-div"></span>
+            <div class="plaque-mark"><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26"
+                fill="none">
+                <path d="M13 1.5L14.9 11.1L24.5 13L14.9 14.9L13 24.5L11.1 14.9L1.5 13L11.1 11.1L13 1.5Z"
+                  fill="#AF2419" />
+              </svg></div>
+          </div>
+        </div>
+
+
+      </section>
+
+      <div class="dateline">
+        <p>CERTIFIED AND STANDARD TRANSLATION &nbsp;·&nbsp; THIRTY LANGUAGES &nbsp;·&nbsp; EVERY DOCUMENT CHECKED TWICE
+        </p>
+      </div>
+      
+      <section class="principles-section" id="principles">
+        <div class="principles-body">
+          <div class="section-stack different_width_for_now">
+
+            <div class="chapter" data-reveal="write">
+              <span class="rule rule--heavy"></span>
+              <div class="new_divt">
+                <span class="no">CHAPTER 01</span>
+
+                <span class="name">PRINCIPLES</span>
+
+              </div>
+              <span class="rule" style="--sd:120ms"></span>
+            </div>
+
+            <h2 class="h2" data-reveal="write" data-write>What holds on every job.</h2>
+            <div class="principles-art desktop_nonet" data-reveal="fade" style="border-radius: var(--radius-m, 12px);">
+              <img src="./img/mobile_imgt.png" alt="" class="img-fluid " style="border-radius: var(--radius-m, 12px);
+              ">
+            </div>
+            <div class="principle-grid ">
+              <div class="mobile_nonet"
+                style="height: 1px; width: 100%; align-self: stretch; background: repeating-linear-gradient(to right, var(--brand-ink, #211E1B) 0, var(--brand-ink, #211E1B) 6px, transparent 6px, transparent 12px);">
+              </div>
+
+
+              <div class="principle-row" data-reveal="write">
+                <div class="principle">
+                  <span class="idx">No. 01</span>
+                  <div class="copy">
+                    <h3 class="h3" data-write>Accuracy</h3>
+                    <p class="body" data-write="word">Every document is checked before it reaches you.</p>
+                  </div>
+                </div>
+                <span class="rule rule--v"></span>
+                <span class="rule desktop_nonet" data-reveal="write"></span>
+                <div class="principle">
+                  <span class="idx">No. 02</span>
+                  <div class="copy">
+                    <h3 class="h3" data-write>Native</h3>
+                    <p class="body" data-write="word">Your document is translated by someone working into their own
+                      language.</p>
+                  </div>
+                </div>
+              </div>
+              <span class="rule" data-reveal="write"></span>
+
+              <div class="principle-row" data-reveal="write">
+                <div class="principle">
+                  <span class="idx">No. 03</span>
+                  <div class="copy">
+                    <h3 class="h3" data-write>Nuance</h3>
+                    <p class="body" data-write="word">Idiom, register and tone are carried across rather than flattened
+                      into something literal.</p>
+                  </div>
+                </div>
+                <span class="rule desktop_nonet" data-reveal="write"></span>
+                <span class="rule rule--v"></span>
+                <div class="principle">
+                  <span class="idx">No. 04</span>
+                  <div class="copy">
+                    <h3 class="h3" data-write>Certainty</h3>
+                    <p class="body" data-write="word">Certified work carries the declaration an official body asks for.
+                      If yours does not need certifying, we will tell you.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="mobile_nonet"
+                style="height: 1px; width: 100%; align-self: stretch; background: repeating-linear-gradient(to right, var(--brand-ink, #211E1B) 0, var(--brand-ink, #211E1B) 6px, transparent 6px, transparent 12px);">
+              </div> <!-- <span class="rule mobile_nonet " data-reveal="write"></span> -->
+
+            </div>
+
+          </div>
+        </div>
+        <div class="principles-art mobile_nonet" data-reveal="fade">
+          <img src="./img/bg_2_home.png" alt="" class="img-fluid ">
+          <!-- <img class="lazyimg" data-asset="principlesImg" alt="Architectural detail against an open sky" loading="lazy"
+            decoding="async"> -->
+        </div>
+      </section>
+
+      <section class="section section--white" id="two-ways">
+        <div class="wrap section-stack">
+
+          <div class="chapter" data-reveal="write">
+            <span class="rule rule--heavy"></span>
+
+            <div class="new_divt">
+              <span class="no">CHAPTER 02</span>
+
+              <span class="name">WHAT WE SELL</span>
+
+            </div>
+            <span class="rule" style="--sd:120ms"></span>
+          </div>
+
+          <div class="sec-head" data-reveal="write">
+            <h2 class="h2" data-write>Two ways we translate.</h2>
+            <p class="note" data-write="word">Which one you need depends on who is going to read it. An official body
+              wants a certificate. A customer wants it to read as though it was written for them.</p>
+          </div>
+
+          <div class="cards">
+            <article class="card card--dark" data-reveal="fade">
+              <div class="badge-row">
+                <span class="badge badge--red">Legal &amp; official</span>
+                <div class="mobile_nonet">
+                  <span class="kind">Certified</span>
+                </div>
+
+              </div>
+              <div class="price"><b>$32</b><span>Per page / 250 words or fewer</span></div>
+              <span class="hr mobile_nonet"></span>
+              <ul class="feat">
+                <li><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                    <path d="M2.91626 7.00006H11.0839M7.00006 2.91626V11.0839" stroke="#AF2419" stroke-width="2"
+                      stroke-linecap="round" />
+                  </svg>Signed statement of accuracy with every document</li>
+                <li><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                    <path d="M2.91626 7.00006H11.0839M7.00006 2.91626V11.0839" stroke="#AF2419" stroke-width="2"
+                      stroke-linecap="round" />
+                  </svg>A specialist legal or academic translator</li>
+                <li><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                    <path d="M2.91626 7.00006H11.0839M7.00006 2.91626V11.0839" stroke="#AF2419" stroke-width="2"
+                      stroke-linecap="round" />
+                  </svg>A complete second-pass review before delivery</li>
+              </ul>
+
+              <div class="cta"><a class="btn btn--primary btn--block" href="#cta">Request certified translation</a>
+              </div>
+            </article>
+
+            <article class="card card--light" data-reveal="fade" style="--sd:140ms">
+              <div class="badge-row">
+                <span class="badge badge--ink">Digital &amp; web</span>
+
+                <div class="mobile_nonet">
+                  <span class="kind">Standard</span>
+                </div>
+              </div>
+              <div class="price"><b>$0.13</b><span>Per word / based on source count</span></div>
+              <span class="hr mobile_nonet"></span>
+              <ul class="feat">
+                <li><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                    <path d="M2.91626 7.00006H11.0839M7.00006 2.91626V11.0839" stroke="#AF2419" stroke-width="2"
+                      stroke-linecap="round" />
+                  </svg>A native speaker of the target language</li>
+                <li><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                    <path d="M2.91626 7.00006H11.0839M7.00006 2.91626V11.0839" stroke="#AF2419" stroke-width="2"
+                      stroke-linecap="round" />
+                  </svg>A context-first approach, never word-for-word</li>
+                <li><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                    <path d="M2.91626 7.00006H11.0839M7.00006 2.91626V11.0839" stroke="#AF2419" stroke-width="2"
+                      stroke-linecap="round" />
+                  </svg>A complete second-pass review before delivery</li>
+              </ul>
+
+              <div class="cta"><a class="btn btn--dark btn--block" href="#cta">Request standard translation</a></div>
+            </article>
+          </div>
+
+        </div>
+      </section>
+
+      <section class="section section--paper" id="how">
+        <div class="wrap section-stack">
+
+          <div class="chapter" data-reveal="write">
+            <span class="rule rule--heavy"></span>
+
+            <div class="new_divt">
+              <span class="no">CHAPTER 03</span>
+
+              <span class="name">HOW YOU ORDER</span>
+
+            </div>
+            <span class="rule" style="--sd:120ms"></span>
+          </div>
+
+          <div class="sec-head" data-reveal="write">
+            <h2 class="h2" data-write>How a translation gets made.</h2>
+            <p class="note" style="width:min(400px,100%)" data-write="word">You see the price and the delivery date
+              before you commit to anything.</p>
+          </div>
+
+          <div class="procedure">
+            <div class="step custom_border_t" data-reveal="write">
+              <span class="num">01</span>
+              <h3 class="h3 title" data-write>Upload your document</h3>
+              <p class="desc" data-write="word">A PDF, a Word file or a photograph of the original. We measure it and
+                count only what genuinely needs translating.</p>
+            </div>
+            <span class="rule" data-reveal="write"></span>
+            <div class="step" data-reveal="write">
+              <span class="num">02</span>
+              <h3 class="h3 title" data-write>Choose service and language</h3>
+              <p class="desc" data-write="word">Certified or standard, your language pair, and standard or urgent
+                delivery. The price and the delivery date update as you choose.</p>
+            </div>
+            <span class="rule" data-reveal="write"></span>
+            <div class="step" data-reveal="write">
+              <span class="num">03</span>
+              <h3 class="h3 title" data-write>Receive your translation</h3>
+              <p class="desc" data-write="word">Back as a Word file and a PDF, with the layout of the original kept. You
+                download it from your account.</p>
+            </div>
+            <span class="rule mobile_nonet" data-reveal="write"></span>
+          </div>
+
+          <div class="turnaround" data-reveal="fade">
+            <!-- <div class="mobile_nonet"> -->
+            <span class="accent mobile_nonet"></span>
+            <!-- </div> -->
+
+            <p>Standard delivery is 72 hours. Urgent delivery is 36 to 48 hours and carries a surcharge of $15.83.</p>
+          </div>
+
+        </div>
+      </section>
+
+      <section class="section section--ink" id="languages">
+        <div class="wrap section-stack">
+
+          <div class="chapter" data-reveal="write">
+            <span class="rule rule--heavy"></span>
+            <div class="new_divt">
+              <span class="no">CHAPTER 04</span>
+
+              <span class="name">WHERE WE WORK</span>
+
+            </div>
+            <span class="rule" style="--sd:120ms"></span>
+          </div>
+
+          <div class="sec-head" data-reveal="write">
+            <h2 class="h2" data-write>Thirty languages,<br>in their own hands.</h2>
+            <div class="mobile_nonet">
+              <a class="btn btn--outline-cream" href="#languages">See all languages</a>
+
+            </div>
+          </div>
+
+          <div class="mobile_nonet">
+            <div class="mobile_none_sk">
+              <div class="sl2_inside2">
+                  <div class="sl2_inn" style="border-top: none;">
+                      <div class="sl2_card for_flex1_t">
+                          <p class="sl2_card_p">العربية</p>
+                          <p class="sl2_card_p2">Arabic</p>
+                      </div>
+                      <div class="sl2_card for_flex1_t">
+                          <p class="sl2_card_p">中文</p>
+                          <p class="sl2_card_p2">Chinese</p>
+                      </div>
+                      <div class="sl2_card for_flex1_t">
+                          <p class="sl2_card_p">বাংলা</p>
+                          <p class="sl2_card_p2">Bengali</p>
+                      </div>
+                      <div class="sl2_card for_flex1_t">
+                          <p class="sl2_card_p">Français</p>
+                          <p class="sl2_card_p2">French</p>
+                      </div>
+                     
+                  </div>
+                  <div class="sl2_inn">
+                    
+                      <div class="sl2_card for_flex1_t">
+                          <p class="sl2_card_p">Deutsch</p>
+                          <p class="sl2_card_p2">German</p>
+                      </div>
+                      <div class="sl2_card for_flex1_t">
+                          <p class="sl2_card_p">Ελληνικά</p>
+                          <p class="sl2_card_p2">Greek</p>
+                      </div>
+                      <div class="sl2_card for_flex1_t">
+                          <p class="sl2_card_p">हिन्दी</p>
+                          <p class="sl2_card_p2">Hindi</p>
+                      </div>
+                      <div class="sl2_card for_flex1_t">
+                          <p class="sl2_card_p">Italiano</p>
+                          <p class="sl2_card_p2">Italian</p>
+                      </div>
+                  </div>
+                  <div class="sl2_inn">
+                      
+                      <div class="sl2_card for_flex1_t">
+                          <p class="sl2_card_p">日本語</p>
+                          <p class="sl2_card_p2">Japanese</p>
+                      </div>
+                      <div class="sl2_card for_flex1_t">
+                          <p class="sl2_card_p">한국어</p>
+                          <p class="sl2_card_p2">Korean</p>
+                      </div>
+                      <div class="sl2_card for_flex1_t">
+                          <p class="sl2_card_p">Português</p>
+                          <p class="sl2_card_p2">Portuguese</p>
+                      </div>
+                      <div class="sl2_card for_flex1_t">
+                          <p class="sl2_card_p">Русский</p>
+                          <p class="sl2_card_p2">Russian</p>
+                      </div>
+                  </div>
+                  
+                  <div class="sl2_inn" style="border-bottom: 1px solid var(--brand-paper, #F3E8D5);">
+                      
+                      <div class="sl2_card for_flex1_t">
+                          <p class="sl2_card_p">Español</p>
+                          <p class="sl2_card_p2">Spanish</p>
+                      </div>
+                      <div class="sl2_card for_flex1_t">
+                          <p class="sl2_card_p">ไทย</p>
+                          <p class="sl2_card_p2">Thai</p>
+                      </div>
+                      <div class="sl2_card for_flex1_t">
+                          <p class="sl2_card_p">Türkçe</p>
+                          <p class="sl2_card_p2">Turkish</p>
+                      </div>
+                      <div class="sl2_card for_flex1_t">
+                          <p class="sl2_card_p">Українська</p>
+                          <p class="sl2_card_p2">Ukrainian</p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+            <!-- <div class="spec-wall">
+              <div class="spec-row" data-reveal="write">
+                <div class="spec"><b lang="ar" dir="auto">العربية</b><span>Arabic</span></div>
+                <div class="spec"><b lang="zh">中文</b><span>Chinese</span></div>
+                <div class="spec"><b lang="nl">Nederlands</b><span>Dutch</span></div>
+                <div class="spec"><b lang="fr">Français</b><span>French</span></div>
+              </div>
+              <div class="spec-row" data-reveal="write">
+                <div class="spec"><b lang="de">Deutsch</b><span>German</span></div>
+                <div class="spec"><b lang="el">Ελληνικά</b><span>Greek</span></div>
+                <div class="spec"><b lang="he" dir="auto">עברית</b><span>Hebrew</span></div>
+                <div class="spec"><b lang="it">Italiano</b><span>Italian</span></div>
+              </div>
+              <div class="spec-row" data-reveal="write">
+                <div class="spec"><b lang="ja">日本語</b><span>Japanese</span></div>
+                <div class="spec"><b lang="ko">한국어</b><span>Korean</span></div>
+                <div class="spec"><b lang="pt">Português</b><span>Portuguese</span></div>
+                <div class="spec"><b lang="ru">Русский</b><span>Russian</span></div>
+              </div>
+              <div class="spec-row" data-reveal="write">
+                <div class="spec"><b lang="es">Español</b><span>Spanish</span></div>
+                <div class="spec"><b lang="th">ไทย</b><span>Thai</span></div>
+                <div class="spec"><b lang="tr">Türkçe</b><span>Turkish</span></div>
+                <div class="spec"><b lang="uk">Українська</b><span>Ukrainian</span></div>
+              </div>
+            </div> -->
+          </div>
+
+          <div class="desktop_nonet">
+            <div class="desk_none_sk w-100">
+              <div class="accordion sl_acc" id="accordionExample">
+                <div class="accordion-item sl_acc_item">
+                  <div class="sl_acc_div_line2"></div>
+                  <h2 class="accordion-header sl_acc_head">
+                    <button class="accordion-button sl_acc_btn" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                      <span class="acc_btn_txt">LATIN</span><span class="acc_btn_nu">14</span>
+                    </button>
+                  </h2>
+                  
+                  <div id="collapseOne" class="accordion-collapse collapse show w-100" data-bs-parent="#accordionExample">
+                    <div class="accordion-body sl_acc_body">
+                      <div class="sl_acc_div">
+                        <div class="sl_acc_div_out">
+                          <div class="sl_acc_div_inn">
+                            <p class="sl_acc_p">Čeština</p>
+                            <p class="sl_acc_p2">Czech</p>
+                          </div>
+                          <div class="sl_acc_div_line"></div>
+                        </div>
+                        <div class="sl_acc_div_out">
+                          <div class="sl_acc_div_inn">
+                            <p class="sl_acc_p">English</p>
+                            <p class="sl_acc_p2">English</p>
+                          </div>
+                          <div class="sl_acc_div_line"></div>
+                        </div>
+                        <div class="sl_acc_div_out">
+                          <div class="sl_acc_div_inn">
+                            <p class="sl_acc_p">Français</p>
+                            <p class="sl_acc_p2">French</p>
+                          </div>
+                          <div class="sl_acc_div_line"></div>
+                        </div>
+                        <div class="sl_acc_div_out">
+                          <div class="sl_acc_div_inn">
+                            <p class="sl_acc_p">Deutsch</p>
+                            <p class="sl_acc_p2">German</p>
+                          </div>
+                          <div class="sl_acc_div_line"></div>
+                        </div>
+                        <div class="sl_acc_div_out">
+                          <div class="sl_acc_div_inn">
+                            <p class="sl_acc_p">Magyar</p>
+                            <p class="sl_acc_p2">Hungarian</p>
+                          </div>
+                          <div class="sl_acc_div_line"></div>
+                        </div>
+                        <div class="sl_acc_div_out">
+                          <div class="sl_acc_div_inn">
+                            <p class="sl_acc_p">Bahasa Indonesia</p>
+                            <p class="sl_acc_p2">Indonesian</p>
+                          </div>
+                          <div class="sl_acc_div_line"></div>
+                        </div>
+                        <div class="sl_acc_div_out">
+                          <div class="sl_acc_div_inn">
+                            <p class="sl_acc_p">Italiano</p>
+                            <p class="sl_acc_p2">Italian</p>
+                          </div>
+                          <div class="sl_acc_div_line"></div>
+                        </div>
+                        <div class="sl_acc_div_out">
+                          <div class="sl_acc_div_inn">
+                            <p class="sl_acc_p">Naijá</p>
+                            <p class="sl_acc_p2">Nigerian Pidgin</p>
+                          </div>
+                          <div class="sl_acc_div_line"></div>
+                        </div>
+                        <div class="sl_acc_div_out">
+                          <div class="sl_acc_div_inn">
+                            <p class="sl_acc_p">Polski</p>
+                            <p class="sl_acc_p2">Polish</p>
+                          </div>
+                          <div class="sl_acc_div_line"></div>
+                        </div>
+                        <div class="sl_acc_div_out">
+                          <div class="sl_acc_div_inn">
+                            <p class="sl_acc_p">Português</p>
+                            <p class="sl_acc_p2">Portuguese</p>
+                          </div>
+                          <div class="sl_acc_div_line"></div>
+                        </div>
+                        <div class="sl_acc_div_out">
+                          <div class="sl_acc_div_inn">
+                            <p class="sl_acc_p">Română</p>
+                            <p class="sl_acc_p2">Romanian</p>
+                          </div>
+                          <div class="sl_acc_div_line"></div>
+                        </div>
+                        <div class="sl_acc_div_out">
+                          <div class="sl_acc_div_inn">
+                            <p class="sl_acc_p">Español</p>
+                            <p class="sl_acc_p2">Spanish</p>
+                          </div>
+                          <div class="sl_acc_div_line"></div>
+                        </div>
+                        <div class="sl_acc_div_out">
+                          <div class="sl_acc_div_inn">
+                            <p class="sl_acc_p">Svenska</p>
+                            <p class="sl_acc_p2">Swedish</p>
+                          </div>
+                          <div class="sl_acc_div_line"></div>
+                        </div>
+                        <div class="sl_acc_div_out">
+                          <div class="sl_acc_div_inn">
+                            <p class="sl_acc_p">Türkçe</p>
+                            <p class="sl_acc_p2">Turkish</p>
+                          </div>
+                          <div class="sl_acc_div_line"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item sl_acc_item">
+                  <div class="sl_acc_div_line2"></div>
+                  <h2 class="accordion-header sl_acc_head">
+                    <button class="accordion-button sl_acc_btn collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                      <span class="acc_btn_txt">CYRILLIC</span><span class="acc_btn_nu">6</span>
+                    </button>
+                  </h2>
+                  <div id="collapseTwo" class="accordion-collapse collapse w-100" data-bs-parent="#accordionExample">
+                    <div class="accordion-body sl_acc_body">
+                      <div class="sl_acc_div">
+                        <div class="sl_acc_div_out">
+                          <div class="sl_acc_div_inn">
+                            <p class="sl_acc_p">Čeština</p>
+                            <p class="sl_acc_p2">Czech</p>
+                          </div>
+                          <div class="sl_acc_div_line"></div>
+                        </div>
+                        <div class="sl_acc_div_out">
+                          <div class="sl_acc_div_inn">
+                            <p class="sl_acc_p">English</p>
+                            <p class="sl_acc_p2">English</p>
+                          </div>
+                          <div class="sl_acc_div_line"></div>
+                        </div>
+                        <div class="sl_acc_div_out">
+                          <div class="sl_acc_div_inn">
+                            <p class="sl_acc_p">Français</p>
+                            <p class="sl_acc_p2">French</p>
+                          </div>
+                          <div class="sl_acc_div_line"></div>
+                        </div>
+                        <div class="sl_acc_div_out">
+                          <div class="sl_acc_div_inn">
+                            <p class="sl_acc_p">Deutsch</p>
+                            <p class="sl_acc_p2">German</p>
+                          </div>
+                          <div class="sl_acc_div_line"></div>
+                        </div>
+                        <div class="sl_acc_div_out">
+                          <div class="sl_acc_div_inn">
+                            <p class="sl_acc_p">Magyar</p>
+                            <p class="sl_acc_p2">Hungarian</p>
+                          </div>
+                          <div class="sl_acc_div_line"></div>
+                        </div>
+                        <div class="sl_acc_div_out">
+                          <div class="sl_acc_div_inn">
+                            <p class="sl_acc_p">Bahasa Indonesia</p>
+                            <p class="sl_acc_p2">Indonesian</p>
+                          </div>
+                          <div class="sl_acc_div_line"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item sl_acc_item">
+                  <div class="sl_acc_div_line2"></div>
+                  <h2 class="accordion-header sl_acc_head">
+                    <button class="accordion-button sl_acc_btn collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                      <span class="acc_btn_txt">ARABIC SCRIPT</span><span class="acc_btn_nu">3</span>
+                    </button>
+                  </h2>
+                  <div id="collapseThree" class="accordion-collapse w-100 collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body sl_acc_body">
+                      <div class="sl_acc_div">
+                        <div class="sl_acc_div_out">
+                          <div class="sl_acc_div_inn">
+                            <p class="sl_acc_p">Čeština</p>
+                            <p class="sl_acc_p2">Czech</p>
+                          </div>
+                          <div class="sl_acc_div_line"></div>
+                        </div>
+                        <div class="sl_acc_div_out">
+                          <div class="sl_acc_div_inn">
+                            <p class="sl_acc_p">English</p>
+                            <p class="sl_acc_p2">English</p>
+                          </div>
+                          <div class="sl_acc_div_line"></div>
+                        </div>
+                        <div class="sl_acc_div_out">
+                          <div class="sl_acc_div_inn">
+                            <p class="sl_acc_p">Français</p>
+                            <p class="sl_acc_p2">French</p>
+                          </div>
+                          <div class="sl_acc_div_line"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item sl_acc_item">
+                  <div class="sl_acc_div_line2"></div>
+                  <h2 class="accordion-header sl_acc_head">
+                    <button class="accordion-button sl_acc_btn collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                      <span class="acc_btn_txt">EAST ASIAN</span><span class="acc_btn_nu">3</span>
+                    </button>
+                  </h2>
+                  <div id="collapseFour" class="accordion-collapse w-100 collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body sl_acc_body">
+                      <div class="sl_acc_div">
+                        <div class="sl_acc_div_out">
+                          <div class="sl_acc_div_inn">
+                            <p class="sl_acc_p">Čeština</p>
+                            <p class="sl_acc_p2">Czech</p>
+                          </div>
+                          <div class="sl_acc_div_line"></div>
+                        </div>
+                        <div class="sl_acc_div_out">
+                          <div class="sl_acc_div_inn">
+                            <p class="sl_acc_p">English</p>
+                            <p class="sl_acc_p2">English</p>
+                          </div>
+                          <div class="sl_acc_div_line"></div>
+                        </div>
+                        <div class="sl_acc_div_out">
+                          <div class="sl_acc_div_inn">
+                            <p class="sl_acc_p">Français</p>
+                            <p class="sl_acc_p2">French</p>
+                          </div>
+                          <div class="sl_acc_div_line"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item sl_acc_item">
+                  <div class="sl_acc_div_line2"></div>
+                  <h2 class="accordion-header sl_acc_head">
+                    <button class="accordion-button sl_acc_btn collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                      <span class="acc_btn_txt">OTHER SCRIPTS</span><span class="acc_btn_nu">4</span>
+                    </button>
+                  </h2>
+                  <div id="collapseFive" class="accordion-collapse w-100 collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body sl_acc_body">
+                      <div class="sl_acc_div">
+                        <div class="sl_acc_div_out">
+                          <div class="sl_acc_div_inn">
+                            <p class="sl_acc_p">Čeština</p>
+                            <p class="sl_acc_p2">Czech</p>
+                          </div>
+                          <div class="sl_acc_div_line"></div>
+                        </div>
+                        <div class="sl_acc_div_out">
+                          <div class="sl_acc_div_inn">
+                            <p class="sl_acc_p">English</p>
+                            <p class="sl_acc_p2">English</p>
+                          </div>
+                          <div class="sl_acc_div_line"></div>
+                        </div>
+                        <div class="sl_acc_div_out">
+                          <div class="sl_acc_div_inn">
+                            <p class="sl_acc_p">Français</p>
+                            <p class="sl_acc_p2">French</p>
+                          </div>
+                          <div class="sl_acc_div_line"></div>
+                        </div>
+                        <div class="sl_acc_div_out">
+                          <div class="sl_acc_div_inn">
+                            <p class="sl_acc_p">Deutsch</p>
+                            <p class="sl_acc_p2">German</p>
+                          </div>
+                          <div class="sl_acc_div_line"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="desktop_nonet">
+            <a class="btn btn--outline-cream" style="width: 100%;" href="#languages">See all languages</a>
+          </div>
+        
+
+
+          
+
+        </div>
+      </section>
+
+      <section class="section section--white" id="proof">
+        <div class="wrap section-stack">
+
+          <div class="chapter" data-reveal="write">
+            <span class="rule rule--heavy"></span>
+            <div class="new_divt">
+              <span class="no">CHAPTER 05</span>
+
+              <span class="name">WHAT ARRIVES</span>
+
+            </div>
+            <span class="rule" style="--sd:120ms"></span>
+          </div>
+
+          <div class="sec-head" data-reveal="write">
+            <h2 class="h2" data-write>The proof is the file we send back.</h2>
+            <p class="note" data-write="word">Nobody can tell whether a translation is any good from a quote on a
+              website. What tells you is the document itself, so here is exactly what arrives.</p>
+          </div>
+
+          <div class="proof-art for_phone_height mobile_nonet" data-reveal="fade">
+            <img src="./img/chapter5_bg.png" alt="" class="img-fluid">
+          </div>
+          <div class="proof-art for_phone_height desktop_nonet" data-reveal="fade">
+            <img src="./img/another_imgt.png" alt="" class="img-fluid">
+          </div>
+
+          <div class="features" data-reveal="write">
+            <div class="feature">
+              <h3 class="h4" data-write>Your formatting, kept</h3>
+              <p class="body" data-write="word">Tables, headers, stamps and signature blocks sit where they sat in the
+                original. Back as a Word file and a PDF.</p>
+            </div>
+            <span class="rule rule--v my_style_linet"></span>
+            <div class="feature">
+              <h3 class="h4" data-write>A signed statement of accuracy</h3>
+              <p class="body" data-write="word">Every certified translation carries a signed declaration naming the
+                translator and confirming the translation is complete and true.</p>
+            </div>
+            <span class="rule rule--v my_style_linet"></span>
+            <div class="feature">
+              <h3 class="h4" data-write>Twelve months of access</h3>
+              <p class="body" data-write="word">Finished files stay downloadable from your account for twelve months,
+                for the next time an application asks for them.</p>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <section class="manuscript-outer" id="cta">
+        <div class="manuscript" data-reveal="fade">
+
+
+          <div class="wrap ms-inner no_padding_t">
+            <div class="desktop_nonet">
+              <span class="stamp different_posotion">APPROVED</span>
+            </div>
+            <div class="ms-head" data-reveal="write">
+              <h2 class="h2 also_new_post" data-write>Translation, <span id="msWord">checked <br
+                    class="desktop_nonet"></span> word by word.</h2>
+              <span class="ms-strike" id="msStrike"></span>
+              <img src="./img/prrofed_t.svg" id="msProofed" class="img-fluid prrofed_t">
+              <!-- <span class="ms-proofed" id="msProofed">proofed</span> -->
+            </div>
+            <p data-write="word">Every Veriti translation is carefully reviewed by a native linguist and then
+              double-checked by a second proofreader to ensure accuracy. Whether it&rsquo;s contracts, certificates, or
+              records, you can trust that your documents are correct, certified, and delivered on time, every time.</p>
+            <div class="ms-cta">
+              <a class="btn btn--primary for_width_moret" href="#cta">Request a translation</a>
+              <a class="btn btn--ink-line for_width_moret" href="#cta">Talk to us first</a>
+            </div>
+          </div>
+          <div class="mobile_nonet">
+            <span class="stamp ">APPROVED</span>
+          </div>
+
+        </div>
+      </section>
+
+    </main>
+
 
 <?php include 'includes/footer.php'; ?>
+
+
+
+
+
+<script src="./uiframe/js/assets.js"></script>
+<script src="./uiframe/js/motion.js"></script>
+<script src="./uiframe/js/nav.js"></script>
+<script src="./uiframe/js/preloader.js"></script>
+<script src="./uiframe/js/page-home.js"></script>

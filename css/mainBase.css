@@ -2,33 +2,40 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap');
 
 
-/* --------- External Library  CSS -------- */
-@import url(../css/hamburgers.css);
-@import url(/uiframe/css/bootstrap.min.css);
-@import url(/uiframe/css/animate.min.css);
-@import url(/uiframe/css/font-awesome.min.css);
-@import url(/uiframe/css/aos.css);
+/* --------- External Library CSS --------- */
 
-/* --------- External Slider  CSS -------- */
+@import url('../uiframe/css/bootstrap.min.css');
+@import url('../uiframe/css/animate.min.css');
+@import url('../uiframe/css/font-awesome.min.css');
+@import url('../uiframe/css/aos.css');
+@import url('../uiframe/css/bootstrap-icons.css');
+@import url('./hamburgers.css');
 
-@import url(../css/owl.carousel.min.css);
-@import url(../css/owl.theme.default.css);
-@import url(../css/swiper-bundle.min.css);
-@import url(/uiframe/css/slick.css);
-@import url(/uiframe/css/slick-theme.css);
 
-/* --------- developer slider css -------- */
+/* --------- External Slider CSS --------- */
 
-@import url(../css/dhiraj.css);
-@import url(../css/dhirajresponsive.css);
-@import url(../css/tstyle.css);
-@import url(../css/sakch.css);
-@import url(../css/sakdam.css);
-@import url(../css/rstyle.css);
-@import url(../css/diksha.css);
-@import url(../css/medhnash.css);
-@import url(../css/style.css);
-@import url(../css/responsive.css);
+@import url('./owl.carousel.min.css');
+@import url('./owl.theme.default.css');
+@import url('./swiper-bundle.min.css');
+@import url('../uiframe/css/slick.css');
+@import url('../uiframe/css/slick-theme.css');
+
+
+/* --------- Developer CSS --------- */
+
+@import url('./dhiraj.css');
+@import url('./dhirajresponsive.css');
+@import url('./tstyle.css');
+@import url('./sakch.css');
+@import url('./sakdam.css');
+@import url('./rstyle.css');
+@import url('./diksha.css');
+@import url('./medhnash.css');
+@import url('./style.css');
+@import url('./responsive.css');
+@import url('./motion.css');
+@import url('./preloader.css');
+@import url('./tokens.css');
 
 /* ------------font family ---------- */
 
@@ -147,3 +154,38 @@ html,body{
   box-sizing: border-box;
 }
 
+
+.border-top-2{
+  border-top: 2px solid #211E1B;
+}
+.border-bottom-2{
+  border-bottom: 2px solid #211E1B;
+}
+.border-bottom-deep{
+  border-bottom: 2px solid #D6C6B4;
+}
+.border-top-deep{
+  border-top: 2px solid #D6C6B4;
+}
+.tag-seal{
+  color: var(--brand-seal, #AF2419);
+  font-family: "Work Sans";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 140%; /* 16.8px */
+  letter-spacing: 1.92px;
+  text-transform: uppercase;
+  margin-bottom: 0px;
+}
+.tag-soft{
+  color: var(--brand-ink-soft, #3E3830);
+  font-family: "Work Sans";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 140%; /* 16.8px */
+  letter-spacing: 1.92px;
+  text-transform: uppercase;
+  margin-bottom: 0px;
+}
