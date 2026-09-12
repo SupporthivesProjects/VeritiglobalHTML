@@ -211,7 +211,7 @@ Your cart.                </h1>
                 </div>
 
 
-                <button class="cart-summary__checkout">
+                <button class="cart-summary__checkout  cart-summary_check">
                     Continue to checkout
                 </button>
 

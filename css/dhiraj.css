@@ -1253,6 +1253,10 @@
     justify-content: space-between;
 }
 
+.cart-summary_chec{
+    margin: 24px 0px 0px;
+}
+
 .cart-summary__security {
     color: var(--brand-ink-soft, #3E3830);
     font-family: "Work Sans";
