@@ -1822,7 +1822,7 @@ opacity: 0.72;}
     display: flex;
 
     width: 100%;
-
+max-width: 440px;
     margin-top: 24px;
 
     padding: 16px 32px;
