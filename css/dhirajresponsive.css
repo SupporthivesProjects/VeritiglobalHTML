@@ -416,6 +416,11 @@
         padding: 14px 20px 28px;
     }
 
+    .cart-summary_check{
+            margin: 0px 24px;
+    max-width: 287px;
+    }
+
 
     /* CHECKOUT */
 
