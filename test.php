@@ -1,3 +1,3 @@
 <?php
-echo "I am test page"
+echo "I am test pages"
 ?>
